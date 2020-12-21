@@ -1,0 +1,11 @@
+C:\Users\Michele Gabrieli\source\repos\prototipo_magazzino\prototipo_magazzino\bin\Debug\netcoreapp2.1\prototipo_magazzino.deps.json
+C:\Users\Michele Gabrieli\source\repos\prototipo_magazzino\prototipo_magazzino\bin\Debug\netcoreapp2.1\prototipo_magazzino.runtimeconfig.json
+C:\Users\Michele Gabrieli\source\repos\prototipo_magazzino\prototipo_magazzino\bin\Debug\netcoreapp2.1\prototipo_magazzino.runtimeconfig.dev.json
+C:\Users\Michele Gabrieli\source\repos\prototipo_magazzino\prototipo_magazzino\bin\Debug\netcoreapp2.1\prototipo_magazzino.dll
+C:\Users\Michele Gabrieli\source\repos\prototipo_magazzino\prototipo_magazzino\bin\Debug\netcoreapp2.1\prototipo_magazzino.pdb
+C:\Users\Michele Gabrieli\source\repos\prototipo_magazzino\prototipo_magazzino\obj\Debug\netcoreapp2.1\prototipo_magazzino.csprojAssemblyReference.cache
+C:\Users\Michele Gabrieli\source\repos\prototipo_magazzino\prototipo_magazzino\obj\Debug\netcoreapp2.1\prototipo_magazzino.csproj.CoreCompileInputs.cache
+C:\Users\Michele Gabrieli\source\repos\prototipo_magazzino\prototipo_magazzino\obj\Debug\netcoreapp2.1\prototipo_magazzino.AssemblyInfoInputs.cache
+C:\Users\Michele Gabrieli\source\repos\prototipo_magazzino\prototipo_magazzino\obj\Debug\netcoreapp2.1\prototipo_magazzino.AssemblyInfo.cs
+C:\Users\Michele Gabrieli\source\repos\prototipo_magazzino\prototipo_magazzino\obj\Debug\netcoreapp2.1\prototipo_magazzino.dll
+C:\Users\Michele Gabrieli\source\repos\prototipo_magazzino\prototipo_magazzino\obj\Debug\netcoreapp2.1\prototipo_magazzino.pdb
