@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Michele Gabrieli\\source\\repos\\prototipo_magazzino\\prototipo_magazzino\\prototipo_magazzino.csproj",
+      "projectUniqueName": "C:\\Users\\Michele Gabrieli\\OneDrive\\Documenti\\GitHub\\progetto-informatica-1\\prototipo_magazzino\\prototipo_magazzino\\prototipo_magazzino.csproj",
       "projectName": "prototipo_magazzino",
-      "projectPath": "C:\\Users\\Michele Gabrieli\\source\\repos\\prototipo_magazzino\\prototipo_magazzino\\prototipo_magazzino.csproj",
+      "projectPath": "C:\\Users\\Michele Gabrieli\\OneDrive\\Documenti\\GitHub\\progetto-informatica-1\\prototipo_magazzino\\prototipo_magazzino\\prototipo_magazzino.csproj",
       "packagesPath": "C:\\Users\\Michele Gabrieli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Michele Gabrieli\\source\\repos\\prototipo_magazzino\\prototipo_magazzino\\obj\\",
+      "outputPath": "C:\\Users\\Michele Gabrieli\\OneDrive\\Documenti\\GitHub\\progetto-informatica-1\\prototipo_magazzino\\prototipo_magazzino\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
