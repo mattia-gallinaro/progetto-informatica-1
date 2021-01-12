@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace prototipo_magazzino
 {
@@ -13,20 +14,27 @@ namespace prototipo_magazzino
         private static int capivenduti;
 
         private static int StoffeMaxMagazzino = 300, CapiMaxMagazzino = 200, SommaQuantitàCapi = 0;
-        private static double SommaQuantitàStoffe = 0;
+        private static double SommaQuantitàStoffe = 0, SpazioRestanteMagazzinoStoffe;
+        private static int SpazioRestanteMagazzinoCapi;
+
+        static string data;
+
+
+
         static void Main(string[] args)
         {
 
             DomandeEssenziali(); 
             NavigazioneDichiarazioneMenù();
 
-
             Console.ReadLine();
         }
 
         static void DomandeEssenziali()
-        {   
+        {
             //Domande essenziali riguardanti la quantità di stoffa e i capi presenti in magazzino oltre ai capi venduti utili per lo svolgimento del codice del programma
+            Console.WriteLine("Scrivi la data di oggi (gg/mm/aaaa)");
+            data = Convert.ToString(Console.ReadLine());
             Console.WriteLine("Quanti metri di cotone ci sono in magazzino?");
             stoffe[0] = Convert.ToDouble(Console.ReadLine()); //assunzione valore da tastiera del cotone che sarà inserito nell'array
             Console.WriteLine("Quanti metri di lino ci sono in magazzino?");
@@ -110,8 +118,7 @@ namespace prototipo_magazzino
             }
             else
             {
-                //se la quantità rispetta la capienza massima comunico all'utente quanti altri metri di stoffa possono stare in magazzino
-                double SpazioRestanteMagazzinoStoffe;
+                //se la quantità rispetta la capienza massima comunico all'utente quanti altri metri di stoffa possono stare in magazzino               
                 SpazioRestanteMagazzinoStoffe = StoffeMaxMagazzino - SommaQuantitàStoffe;
                 Console.WriteLine("In magazzino ci sono {0} metri di stoffa", SommaQuantitàStoffe);
                 Console.WriteLine("In magazzino si possono inserire ancora {0} metri di stoffa", SpazioRestanteMagazzinoStoffe);
@@ -123,7 +130,6 @@ namespace prototipo_magazzino
             }
             else
             {   //se la quantità rispetta la capienza massima comunico all'utente quanti altri capi possono stare in magazzino
-                int SpazioRestanteMagazzinoCapi;
                 SpazioRestanteMagazzinoCapi = CapiMaxMagazzino - SommaQuantitàCapi;
                 Console.WriteLine("In magazzino ci sono {0} capi", SommaQuantitàCapi);
                 Console.WriteLine("In magazzino si possono insererire ancora {0} capi", SpazioRestanteMagazzinoCapi);
@@ -145,6 +151,7 @@ namespace prototipo_magazzino
             jolly = Convert.ToString(Console.ReadLine());
             if (jolly == "*") // se l'utente inserirà *
             {
+                SalvataggioSuFile();
                 System.Environment.Exit(1); //allora il programma verrà chiuso
 
             }
@@ -173,6 +180,7 @@ namespace prototipo_magazzino
             jolly = Convert.ToString(Console.ReadLine());
             if (jolly == "*")
             {
+                SalvataggioSuFile();
                 System.Environment.Exit(1);
 
             }
@@ -201,6 +209,7 @@ namespace prototipo_magazzino
             jolly = Convert.ToString(Console.ReadLine());
             if (jolly == "*")
             {
+                SalvataggioSuFile();
                 System.Environment.Exit(1);
 
             }
@@ -229,6 +238,7 @@ namespace prototipo_magazzino
             jolly = Convert.ToString(Console.ReadLine());
             if (jolly == "*")
             {
+                SalvataggioSuFile();
                 System.Environment.Exit(1);
 
             }
@@ -248,6 +258,24 @@ namespace prototipo_magazzino
 
                 }
             }
+        }
+
+        static void SalvataggioSuFile()
+        {
+            string FileSalvataggio = @"C:\Users\Michele Gabrieli\OneDrive\Documenti\GitHub\progetto-informatica-1\FileSalvataggio";//dove salvo il file
+            StreamWriter streamwriter = new StreamWriter(FileSalvataggio, true);//creo file e metto true in modo che non sovrascriva le stringhe nel file.
+            streamwriter.WriteLine(data);//scrivo la data
+            streamwriter.WriteLine("In magazzino sono presenti:");
+            streamwriter.WriteLine("{0} metri di cotone;", stoffe[0]);
+            streamwriter.WriteLine("{0} metri di lino;", stoffe[1]);
+            streamwriter.WriteLine("{0} metri di seta;", stoffe[2]);
+            streamwriter.WriteLine("{0} metri di pizzo;", stoffe[3]);
+            streamwriter.WriteLine("{0} metri di velluto;", stoffe[4]);
+            streamwriter.WriteLine("{0} metri di lana;", stoffe[5]);
+            streamwriter.WriteLine("{0} metri di maglia;", stoffe[6]);
+            streamwriter.WriteLine("In magazzino ci sono {0} metri di stoffa e ci possono ancora stare {1} metri", SommaQuantitàStoffe, SpazioRestanteMagazzinoStoffe);
+            streamwriter.WriteLine("In magazzino ci sono {0} abiti e si possono ancora inserire {1} capi", SommaQuantitàCapi, SpazioRestanteMagazzinoCapi);
+            streamwriter.Close();
         }
     }
 }
