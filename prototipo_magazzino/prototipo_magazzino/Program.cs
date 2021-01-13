@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace prototipo_magazzino
 {
@@ -13,20 +14,27 @@ namespace prototipo_magazzino
         private static int capivenduti;
 
         private static int StoffeMaxMagazzino = 300, CapiMaxMagazzino = 200, SommaQuantitàCapi = 0;
-        private static double SommaQuantitàStoffe = 0;
+        private static double SommaQuantitàStoffe = 0, SpazioRestanteMagazzinoStoffe;
+        private static int SpazioRestanteMagazzinoCapi;
+
+        static string data;
+
+
+
         static void Main(string[] args)
         {
 
             DomandeEssenziali(); 
             NavigazioneDichiarazioneMenù();
 
-
             Console.ReadLine();
         }
 
         static void DomandeEssenziali()
-        {   
+        {
             //Domande essenziali riguardanti la quantità di stoffa e i capi presenti in magazzino oltre ai capi venduti utili per lo svolgimento del codice del programma
+            Console.WriteLine("Scrivi la data di oggi (gg/mm/aaaa)");
+            data = Convert.ToString(Console.ReadLine());
             Console.WriteLine("Quanti metri di cotone ci sono in magazzino?");
             stoffe[0] = Convert.ToDouble(Console.ReadLine()); //assunzione valore da tastiera del cotone che sarà inserito nell'array
             Console.WriteLine("Quanti metri di lino ci sono in magazzino?");
@@ -58,13 +66,91 @@ namespace prototipo_magazzino
 
             if (SommaQuantitàStoffe > StoffeMaxMagazzino) //controllo se la quantità di stoffa presente in magazzino supera la capienza massima
             {
-                Console.WriteLine("I m di stoffa presenti in magazzino sono troppi"); //se fosse così comunico all'utente che in magazzino ci sono troppi vestiti
+                Console.WriteLine("Ci sono troppi metri di stoffa; hai sbagliato a digitare i numeri?"); //se le stoffe in magazzzino sono troppe e superano la capienzamax chiedo all'utente se v
+                string Risposta;
+                Risposta = Convert.ToString(Console.ReadLine());
+                if (Risposta == "Si")// se l'utente risponde si reinserisce le quantita di ogni stoffa
+                {
+                    SommaQuantitàStoffe = 0; //riazzero la somma della quantità delle stoffe
+                    int b;//creo variabile b
+                    for (b = 0; b<7; b++) //creo un for 
+                    {
+                        stoffe[b] = 0; //assegno il valore 0 ad ogni livello dell'array stoffe, per poter reinserire le quantità
+                    }
+                    Console.WriteLine("Reinserisci le quantità delle stoffe");
+                    Console.WriteLine("Quanti metri di cotone ci sono in magazzino?");
+                    stoffe[0] = Convert.ToDouble(Console.ReadLine()); //assunzione valore da tastiera del cotone che sarà inserito nell'array
+                    Console.WriteLine("Quanti metri di lino ci sono in magazzino?");
+                    stoffe[1] = Convert.ToDouble(Console.ReadLine()); //assunzione valore da tastiera del lino che sarà inserito nell'array
+                    Console.WriteLine("Quanti metri di seta ci sono in magazzino?");
+                    stoffe[2] = Convert.ToDouble(Console.ReadLine()); //assunzione valore da tastiera deella seta che sarà inserito nell'array
+                    Console.WriteLine("Quanti metri di pizzo ci sono in magazzino?");
+                    stoffe[3] = Convert.ToDouble(Console.ReadLine()); //assunzione valore da tastiera di pizzo che sarà inserito nell'array
+                    Console.WriteLine("Quanti metri di velluto ci sono in magazzino?");
+                    stoffe[4] = Convert.ToDouble(Console.ReadLine()); //assunzione valore da tastiera del velluto che sarà inserito nell'array
+                    Console.WriteLine("Quanti metri di lana ci sono in magazzino?");
+                    stoffe[5] = Convert.ToDouble(Console.ReadLine()); //assunzione valore da tastiera dela lana che sarà inserito nell'array
+                    Console.WriteLine("Quanti metri di maglia ci sono in magazzino?");
+                    stoffe[6] = Convert.ToDouble(Console.ReadLine()); //assunzione valore da tastiera della maglia che sarà inserito nell'array
+                    int c; //variabile utile per il for
+                    for (c = 0; c < 7; c++)
+                    {
+                        SommaQuantitàStoffe = stoffe[c] + SommaQuantitàStoffe; //calcolo della quantità di stoffa presente in magazzino
+                    }
+                }
+                if (SommaQuantitàStoffe > StoffeMaxMagazzino) //se la quantità restasse ancora maggiore della capienza
+                {
+                    Console.WriteLine("I m di stoffa presenti in magazzino sono troppi"); //lo comunico all'utente 
+                    Console.WriteLine("Se vuoi mandare dei capi in produzione digita 2, altrimenti schiaccia qualsiasi altro tasto per continuare");//e gli chiedo se vuole mandare dei capi in produzione in modod da diminuire la quantità di stoffa presente in magazzino
+                    int TroppiCapiAccessoMenù2;
+                    TroppiCapiAccessoMenù2 = Convert.ToInt32(Console.ReadLine());
+                    if (TroppiCapiAccessoMenù2 == 2 & SommaQuantitàCapi < CapiMaxMagazzino) //vado al menù2
+                    {
+                        Menù2();
+                    }
+                    if (TroppiCapiAccessoMenù2 == 2 & SommaQuantitàCapi > CapiMaxMagazzino)
+                    {
+                        Console.WriteLine("attenzione!! In magazzino sono presenti troppi capi; reinserisci le quantità");
+                        SommaQuantitàCapi = 0; // riazzera la quantità totale di capi
+                        Console.WriteLine("Quante felpe ci sono in magazzino?");
+                        felpe = Convert.ToInt32(Console.ReadLine()); //assunzione valore da tastiera delle felpe presenti in magazzino
+                        Console.WriteLine("Quante tshirt ci sono in magazzino?");
+                        giubbotti = Convert.ToInt32(Console.ReadLine()); //assunzione valore da tastiera dei giubbotti presenti in magazzino
+                        Console.WriteLine("Quanti pantaloni ci sono in magazzino?");
+                        pantaloni = Convert.ToInt32(Console.ReadLine()); //assunzione valore da tastiera dei pantaloni presenti in magazzino
+                        SommaQuantitàCapi = felpe + giubbotti + pantaloni; //calcolo la quantità di capi in magazzino
+                        if (SommaQuantitàCapi > CapiMaxMagazzino)//se la quantita di capi in magazzino restasse comq maggiore lo comunico all'utente e poi vado al menù 2
+                        {
+                            Console.WriteLine("In magazzino ci sono troppi capi devi venderne {0} per restare dentro la capienza massima", SommaQuantitàCapi - CapiMaxMagazzino);
+                        }
+                        Menù2();
+                    }
+                }
             }
 
             SommaQuantitàCapi = felpe + giubbotti + pantaloni; //calcolo la quantità di capi in magazzino
             if (SommaQuantitàCapi > CapiMaxMagazzino) //controllo se la quantità di capi presente in magazzino supera la capienza massima 
             {
                 Console.WriteLine("La quantia di capi presenti in magazzino è troppo grande"); //se fosse così comunico all'utente che nel magazzino ci sono troppi capi
+                Console.WriteLine("Vuoi reinserire le quantità di capi?");
+                string risposta;
+                risposta = Convert.ToString(Console.ReadLine());
+                if (risposta == "Si")
+                {
+                    SommaQuantitàCapi = 0; // riazzera la quantità totale di capi
+                    Console.WriteLine("Quante felpe ci sono in magazzino?");
+                    felpe = Convert.ToInt32(Console.ReadLine()); //assunzione valore da tastiera delle felpe presenti in magazzino
+                    Console.WriteLine("Quante tshirt ci sono in magazzino?");
+                    giubbotti = Convert.ToInt32(Console.ReadLine()); //assunzione valore da tastiera dei giubbotti presenti in magazzino
+                    Console.WriteLine("Quanti pantaloni ci sono in magazzino?");
+                    pantaloni = Convert.ToInt32(Console.ReadLine()); //assunzione valore da tastiera dei pantaloni presenti in magazzino
+                    SommaQuantitàCapi = felpe + giubbotti + pantaloni; //calcolo la quantità di capi in magazzino
+                }
+                if (SommaQuantitàCapi > CapiMaxMagazzino)
+                {
+                    Console.WriteLine("In magazzino ci sono troppi capi devi venderne {0} per restare dentro la capienza massima", SommaQuantitàCapi - CapiMaxMagazzino);
+                }
+                
             }
         }
         static void NavigazioneDichiarazioneMenù()
@@ -110,8 +196,7 @@ namespace prototipo_magazzino
             }
             else
             {
-                //se la quantità rispetta la capienza massima comunico all'utente quanti altri metri di stoffa possono stare in magazzino
-                double SpazioRestanteMagazzinoStoffe;
+                //se la quantità rispetta la capienza massima comunico all'utente quanti altri metri di stoffa possono stare in magazzino               
                 SpazioRestanteMagazzinoStoffe = StoffeMaxMagazzino - SommaQuantitàStoffe;
                 Console.WriteLine("In magazzino ci sono {0} metri di stoffa", SommaQuantitàStoffe);
                 Console.WriteLine("In magazzino si possono inserire ancora {0} metri di stoffa", SpazioRestanteMagazzinoStoffe);
@@ -123,9 +208,11 @@ namespace prototipo_magazzino
             }
             else
             {   //se la quantità rispetta la capienza massima comunico all'utente quanti altri capi possono stare in magazzino
-                int SpazioRestanteMagazzinoCapi;
                 SpazioRestanteMagazzinoCapi = CapiMaxMagazzino - SommaQuantitàCapi;
-                Console.WriteLine("In magazzino ci sono {0} capi", SommaQuantitàCapi);
+                Console.WriteLine("In magazzino ci sono {0} capi, di cui:", SommaQuantitàCapi);
+                Console.WriteLine("{0} felpe", felpe);
+                Console.WriteLine("{0} pantaloni", pantaloni);
+                Console.WriteLine("{0} giubbotti", giubbotti);
                 Console.WriteLine("In magazzino si possono insererire ancora {0} capi", SpazioRestanteMagazzinoCapi);
             }
 
@@ -145,6 +232,7 @@ namespace prototipo_magazzino
             jolly = Convert.ToString(Console.ReadLine());
             if (jolly == "*") // se l'utente inserirà *
             {
+                SalvataggioSuFile();
                 System.Environment.Exit(1); //allora il programma verrà chiuso
 
             }
@@ -173,6 +261,7 @@ namespace prototipo_magazzino
             jolly = Convert.ToString(Console.ReadLine());
             if (jolly == "*")
             {
+                SalvataggioSuFile();
                 System.Environment.Exit(1);
 
             }
@@ -201,6 +290,7 @@ namespace prototipo_magazzino
             jolly = Convert.ToString(Console.ReadLine());
             if (jolly == "*")
             {
+                SalvataggioSuFile();
                 System.Environment.Exit(1);
 
             }
@@ -229,6 +319,7 @@ namespace prototipo_magazzino
             jolly = Convert.ToString(Console.ReadLine());
             if (jolly == "*")
             {
+                SalvataggioSuFile();
                 System.Environment.Exit(1);
 
             }
@@ -248,6 +339,28 @@ namespace prototipo_magazzino
 
                 }
             }
+        }
+
+        static void SalvataggioSuFile()
+        {
+            string FileSalvataggio = @"C:\Users\Michele Gabrieli\OneDrive\Documenti\GitHub\progetto-informatica-1\FileSalvataggio";//dove salvo il file
+            StreamWriter streamwriter = new StreamWriter(FileSalvataggio, true);//creo file e metto true in modo che non sovrascriva le stringhe nel file.
+            streamwriter.WriteLine(data);//scrivo la data
+            streamwriter.WriteLine("In magazzino sono presenti:");
+            streamwriter.WriteLine("{0} metri di cotone;", stoffe[0]);
+            streamwriter.WriteLine("{0} metri di lino;", stoffe[1]);
+            streamwriter.WriteLine("{0} metri di seta;", stoffe[2]);
+            streamwriter.WriteLine("{0} metri di pizzo;", stoffe[3]);
+            streamwriter.WriteLine("{0} metri di velluto;", stoffe[4]);
+            streamwriter.WriteLine("{0} metri di lana;", stoffe[5]);
+            streamwriter.WriteLine("{0} metri di maglia;", stoffe[6]);
+            streamwriter.WriteLine("In magazzino ci sono {0} metri di stoffa e ci possono ancora stare {1} metri", SommaQuantitàStoffe, SpazioRestanteMagazzinoStoffe);
+            streamwriter.WriteLine("In magazzino ci sono {0} capi, di cui:", SommaQuantitàCapi);
+            streamwriter.WriteLine("{0} felpe", felpe);
+            streamwriter.WriteLine("{0} pantaloni", pantaloni);
+            streamwriter.WriteLine("{0} giubbotti", giubbotti);
+            streamwriter.WriteLine("In magazzino ci possono ancora stare {0} capi", SpazioRestanteMagazzinoCapi);
+            streamwriter.Close();
         }
     }
 }
