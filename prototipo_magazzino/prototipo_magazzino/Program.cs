@@ -10,7 +10,7 @@ namespace prototipo_magazzino
         static string[] taglie = new string[4] { "S", "M", "L", "XL" };
 
         private static int felpe, giubbotti, pantaloni;
-
+        private static double prezzoprod = 0, prezzovend = 0;
         private static int capivenduti;
 
         private static int StoffeMaxMagazzino = 300, CapiMaxMagazzino = 200, SommaQuantitàCapi = 0;
@@ -3722,29 +3722,29 @@ namespace prototipo_magazzino
         static void Menù3()
         {
             //richiesta del tipo di capo da vendere
-            Console.WriteLine("\nChe tipo di capo vuoi vendere?\n1 -> Felpa \n2 -> Giubbotto\n3 -> Pantaloni");
+            Console.Write("\nChe tipo di capo vuoi vendere?\n1 -> Felpa \n2 -> Giubbotto\n3 -> Pantaloni\nRisposta: ");
             string capo = Convert.ToString(Console.ReadLine());
             while (capo != "1" && capo != "2" && capo != "3") //controlla che il numero inserito faccia parte dei numeri proposti
             {
-                Console.WriteLine("\nIl numero inserito non è valido; reinserire il numero.");
+                Console.Write("\nIl numero inserito non è valido; reinserire il numero.\nRisposta: ");
                 capo = Convert.ToString(Console.ReadLine());
             }
 
             //richiesta della taglia del capo
-            Console.WriteLine("\nDi che taglia è il capo vuoi vendere?\n1 -> S \n2 -> M\n3 -> L\n4 -> XL");
+            Console.Write("\nDi che taglia è il capo vuoi vendere?\n1 -> S \n2 -> M\n3 -> L\n4 -> XL\nRisposta: ");
             string taglia = Convert.ToString(Console.ReadLine());
             while (taglia != "1" && taglia != "2" && taglia != "3" && taglia != "4") //controlla che il numero inserito faccia parte dei numeri proposti
             {
-                Console.WriteLine("\nIl numero inserito non è valido; reinserire il numero.");
+                Console.Write("\nIl numero inserito non è valido; reinserire il numero.\nRisposta: ");
                 taglia = Convert.ToString(Console.ReadLine());
             }
 
             //richiesta del materiale del capo
-            Console.WriteLine("\nDi che materiale è il capo vuoi vendere?\n1 -> Cotone \n2 -> Lino\n3 -> Seta\n4 -> Pizzo\n5 -> Velluto\n6 -> Lana\n7 -> Maglia");
+            Console.Write("\nDi che materiale è il capo vuoi vendere?\n1 -> Cotone \n2 -> Lino\n3 -> Seta\n4 -> Pizzo\n5 -> Velluto\n6 -> Lana\n7 -> Maglia\nRisposta: ");
             string materiale = Convert.ToString(Console.ReadLine());
             while (materiale != "1" && materiale != "2" && materiale != "3" && materiale != "4" && materiale != "5" && materiale != "6" && materiale != "7") //controlla che il numero inserito faccia parte dei numeri proposti
             {
-                Console.WriteLine("\nIl numero inserito non è valido; reinserire il numero.");
+                Console.Write("\nIl numero inserito non è valido; reinserire il numero.\nRisposta: ");
                 materiale = Convert.ToString(Console.ReadLine());
             }
 
@@ -3752,21 +3752,21 @@ namespace prototipo_magazzino
             string raffinatezza = " ";
             if(materiale == "3" || materiale == "6")
             {
-                Console.WriteLine("\nDi che raffinatezza è il capo vuoi vendere?\n1 -> Base \n2 -> Alta");
+                Console.Write("\nDi che raffinatezza è il capo vuoi vendere?\n1 -> Base \n2 -> Alta\nRisposta: ");
                 raffinatezza = Convert.ToString(Console.ReadLine());
                 while (raffinatezza != "1" && raffinatezza != "2") //controlla che il numero inserito faccia parte dei numeri proposti
                 {
-                    Console.WriteLine("\nIl numero inserito non è valido; reinserire il numero.");
+                    Console.Write("\nIl numero inserito non è valido; reinserire il numero.\nRisposta: ");
                     raffinatezza = Convert.ToString(Console.ReadLine());
                 }
             }
             else
             {
-                Console.WriteLine("\nDi che raffinatezza è il capo vuoi vendere?\n1 -> Base \n2 -> Media \n3 -> Alta");
+                Console.Write("\nDi che raffinatezza è il capo vuoi vendere?\n1 -> Base \n2 -> Media \n3 -> Alta\nRisposta: ");
                 raffinatezza = Convert.ToString(Console.ReadLine()); 
                 while (raffinatezza != "1" && raffinatezza != "2" && raffinatezza != "3") //controlla che il numero inserito faccia parte dei numeri proposti
                 {
-                    Console.WriteLine("\nIl numero inserito non è valido; reinserire il numero.");
+                    Console.Write("\nIl numero inserito non è valido; reinserire il numero.\nRisposta: ");
                     raffinatezza = Convert.ToString(Console.ReadLine());
                 }
             }
@@ -3774,7 +3774,6 @@ namespace prototipo_magazzino
             //variabili che verranno usate per calcolare il prezzo di produzione
             double colore = 1;
             double manodop = 3;
-            double prezzoprod = 0;
             double tesspertagl = 0;
             double prezzraff = 0;
 
@@ -3934,7 +3933,10 @@ namespace prototipo_magazzino
 
             //calcolo del prezzo di produzione (manodopera + costo colorante + prezzo del tessuto in base a taglia e metratura del tipo di capo)
             prezzoprod = manodop + colore + (tesspertagl*prezzraff);
-            Console.WriteLine(prezzoprod);
+            prezzovend = prezzoprod * 7;
+
+            Console.WriteLine("Prodotto a: {0}", prezzoprod);
+            Console.WriteLine("Venduto a: {0}", prezzovend);
 
 
             Console.WriteLine("se vorrai uscire dal programma digita *, altrimenti digita un'altro numero del menù");
