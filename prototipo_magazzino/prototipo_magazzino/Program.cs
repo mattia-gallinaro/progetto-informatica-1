@@ -19,8 +19,6 @@ namespace prototipo_magazzino
 
         static string data;
 
-
-
         static void Main(string[] args)
         {
 
@@ -3723,6 +3721,216 @@ namespace prototipo_magazzino
 
         static void Menù3()
         {
+            //{ cotone, lino, seta, pizzo, velluto, lana, maglia }
+            Console.WriteLine("\nChe tipo di capo vuoi vendere?\n1 -> Felpa \n2 -> Giubbotto\n3 -> Pantaloni");
+            string capo = Convert.ToString(Console.ReadLine());
+            while (capo != "1" && capo != "2" && capo != "3")
+            {
+                Console.WriteLine("\nIl numero inserito non è valido; reinserire il numero.");
+                capo = Convert.ToString(Console.ReadLine());
+            }
+
+            Console.WriteLine("\nDi che taglia è il capo vuoi vendere?\n1 -> S \n2 -> M\n3 -> L\n4 -> XL");
+            string taglia = Convert.ToString(Console.ReadLine());
+            while (taglia != "1" && taglia != "2" && taglia != "3" && taglia != "4")
+            {
+                Console.WriteLine("\nIl numero inserito non è valido; reinserire il numero.");
+                taglia = Convert.ToString(Console.ReadLine());
+            }
+
+            Console.WriteLine("\nDi che materiale è il capo vuoi vendere?\n1 -> Cotone \n2 -> Lino\n3 -> Seta\n4 -> Pizzo\n5 -> Velluto\n6 -> Lana\n7 -> Maglia");
+            string materiale = Convert.ToString(Console.ReadLine());
+            while (materiale != "1" && materiale != "2" && materiale != "3" && materiale != "4" && materiale != "5" && materiale != "6" && materiale != "7")
+            {
+                Console.WriteLine("\nIl numero inserito non è valido; reinserire il numero.");
+                materiale = Convert.ToString(Console.ReadLine());
+            }
+
+            string raffinatezza = " ";
+            if(materiale == "3" || materiale == "6")
+            {
+                Console.WriteLine("\nDi che raffinatezza è il capo vuoi vendere?\n1 -> Base \n2 -> Alta");
+                raffinatezza = Convert.ToString(Console.ReadLine());
+                while (raffinatezza != "1" && raffinatezza != "2")
+                {
+                    Console.WriteLine("\nIl numero inserito non è valido; reinserire il numero.");
+                    raffinatezza = Convert.ToString(Console.ReadLine());
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nDi che raffinatezza è il capo vuoi vendere?\n1 -> Base \n2 -> Media \n3 -> Alta");
+                raffinatezza = Convert.ToString(Console.ReadLine());
+                while (raffinatezza != "1" && raffinatezza != "2" && raffinatezza != "3")
+                {
+                    Console.WriteLine("\nIl numero inserito non è valido; reinserire il numero.");
+                    raffinatezza = Convert.ToString(Console.ReadLine());
+                }
+            }
+
+            double colore = 1;
+            double manodop = 3;
+            double prezzo = 0;
+            double tesspertagl = 0;
+            double prezzraff = 0;
+
+            switch (capo)
+            {
+                case "1":
+                    switch (taglia)
+                    {
+                        case "1":
+                            tesspertagl = 2;
+                            break;
+                        case "2":
+                            tesspertagl = 2.2;
+                            break;
+                        case "3":
+                            tesspertagl = 2.5;
+                            break;
+                        case "4":
+                            tesspertagl = 2.7;
+                            break;
+                    }
+                    break;
+                case "2":
+                    switch (taglia)
+                    {
+                        case "1":
+                            tesspertagl = 2.5;
+                            break;
+                        case "2":
+                            tesspertagl = 2.8;
+                            break;
+                        case "3":
+                            tesspertagl = 3;
+                            break;
+                        case "4":
+                            tesspertagl = 3.2;
+                            break;
+                    }
+                    break;
+                case "3":
+                    switch (taglia)
+                    {
+                        case "1":
+                            tesspertagl = 1.2;
+                            break;
+                        case "2":
+                            tesspertagl = 1.5;
+                            break;
+                        case "3":
+                            tesspertagl = 1.6;
+                            break;
+                        case "4":
+                            tesspertagl = 1.8;
+                            break;
+                    }
+                    break;
+
+            }
+
+            switch (materiale)
+            {
+                case "1":
+                    switch (raffinatezza)
+                    {
+                        case "1":
+                            prezzraff = 2.5;
+                            break;
+                        case "2":
+                            prezzraff = 5;
+                            break;
+                        case "3":
+                            prezzraff = 7;
+                            break;
+                    }
+                    break;
+                case "2":
+                    switch (raffinatezza)
+                    {
+                        case "1":
+                            prezzraff = 3;
+                            break;
+                        case "2":
+                            prezzraff = 6;
+                            break;
+                        case "3":
+                            prezzraff = 10;
+                            break;
+                    }
+                    break;
+                case "3":
+                    switch (raffinatezza)
+                    {
+                        case "1":
+                            prezzraff = 11;
+                            break;
+                        case "2":
+                            prezzraff = 22;
+                            break;
+                    }
+                    break;
+                case "4":
+                    switch (raffinatezza)
+                    {
+                        case "1":
+                            prezzraff = 1.5;
+                            break;
+                        case "2":
+                            prezzraff = 4;
+                            break;
+                        case "3":
+                            prezzraff = 5.5;
+                            break;
+
+                    }
+                    break;
+                case "5":
+                    switch (raffinatezza)
+                    {
+                        case "1":
+                            prezzraff = 4;
+                            break;
+                        case "2":
+                            prezzraff = 8;
+                            break;
+                        case "3":
+                            prezzraff = 13;
+                            break;
+                    }
+                    break;
+                case "6":
+                    switch (raffinatezza)
+                    {
+                        case "1":
+                            prezzraff = 3;
+                            break;
+                        case "2":
+                            prezzraff = 7;
+                            break;
+                    }
+                    break;
+                case "7":
+                    switch (raffinatezza)
+                    {
+                        case "1":
+                            prezzraff = 3.5;
+                            break;
+                        case "2":
+                            prezzraff = 7;
+                            break;
+                        case "3":
+                            prezzraff = 10;
+                            break;
+                    }
+                    break;
+            }
+
+            prezzo = manodop + colore + (tesspertagl*prezzraff);
+            Console.WriteLine(prezzo);
+
+
             Console.WriteLine("se vorrai uscire dal programma digita *, altrimenti digita un'altro numero del menù");
             string jolly;
             jolly = Convert.ToString(Console.ReadLine());
@@ -3752,6 +3960,7 @@ namespace prototipo_magazzino
 
         static void Menù4()
         {
+            
             Console.WriteLine("se vorrai uscire dal programma digita *, altrimenti digita un'altro numero del menù");
             string jolly;
             jolly = Convert.ToString(Console.ReadLine());
@@ -3781,10 +3990,11 @@ namespace prototipo_magazzino
 
         static void SalvataggioSuFile()
         {
-            string FileSalvataggio = @"C:\Users\Michele Gabrieli\OneDrive\Documenti\GitHub\progetto-informatica-1\FileSalvataggio";//dove salvo il file
-            StreamWriter streamwriter = new StreamWriter(FileSalvataggio, true);//creo file e metto true in modo che non sovrascriva le stringhe nel file.
+            string filename = @"FileSalvataggio.txt";
+            string filePath = AppDomain.CurrentDomain.BaseDirectory + filename;
+            StreamWriter streamwriter = new StreamWriter(filePath, true);//creo file e metto true in modo che non sovrascriva le stringhe nel file.
             streamwriter.WriteLine(data);//scrivo la data
-            streamwriter.WriteLine("In magazzino sono presenti:");
+            streamwriter.WriteLine("\nIn magazzino sono presenti:");
             streamwriter.WriteLine("{0} metri di cotone;", stoffe[0]);
             streamwriter.WriteLine("{0} metri di lino;", stoffe[1]);
             streamwriter.WriteLine("{0} metri di seta;", stoffe[2]);

@@ -1,0 +1,48 @@
+14/01/2021
+
+In magazzino sono presenti:
+2 metri di cotone;
+2 metri di lino;
+2 metri di seta;
+2 metri di pizzo;
+2 metri di velluto;
+2 metri di lana;
+2 metri di maglia;
+In magazzino ci sono 14 metri di stoffa e ci possono ancora stare 286 metri
+In magazzino ci sono 6 capi, di cui:
+2 felpe
+2 pantaloni
+2 giubbotti
+In magazzino ci possono ancora stare 194 capi
+14/01/2021
+
+In magazzino sono presenti:
+2 metri di cotone;
+3 metri di lino;
+4 metri di seta;
+5 metri di pizzo;
+6 metri di velluto;
+3 metri di lana;
+2 metri di maglia;
+In magazzino ci sono 25 metri di stoffa e ci possono ancora stare 0 metri
+In magazzino ci sono 12 capi, di cui:
+4 felpe
+3 pantaloni
+5 giubbotti
+In magazzino ci possono ancora stare 0 capi
+14/01/2021
+
+In magazzino sono presenti:
+2 metri di cotone;
+3 metri di lino;
+4 metri di seta;
+5 metri di pizzo;
+6 metri di velluto;
+7 metri di lana;
+1 metri di maglia;
+In magazzino ci sono 28 metri di stoffa e ci possono ancora stare 0 metri
+In magazzino ci sono 9 capi, di cui:
+2 felpe
+4 pantaloni
+3 giubbotti
+In magazzino ci possono ancora stare 0 capi
