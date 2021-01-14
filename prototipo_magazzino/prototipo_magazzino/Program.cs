@@ -3721,37 +3721,40 @@ namespace prototipo_magazzino
 
         static void Menù3()
         {
-            //{ cotone, lino, seta, pizzo, velluto, lana, maglia }
+            //richiesta del tipo di capo da vendere
             Console.WriteLine("\nChe tipo di capo vuoi vendere?\n1 -> Felpa \n2 -> Giubbotto\n3 -> Pantaloni");
             string capo = Convert.ToString(Console.ReadLine());
-            while (capo != "1" && capo != "2" && capo != "3")
+            while (capo != "1" && capo != "2" && capo != "3") //controlla che il numero inserito faccia parte dei numeri proposti
             {
                 Console.WriteLine("\nIl numero inserito non è valido; reinserire il numero.");
                 capo = Convert.ToString(Console.ReadLine());
             }
 
+            //richiesta della taglia del capo
             Console.WriteLine("\nDi che taglia è il capo vuoi vendere?\n1 -> S \n2 -> M\n3 -> L\n4 -> XL");
             string taglia = Convert.ToString(Console.ReadLine());
-            while (taglia != "1" && taglia != "2" && taglia != "3" && taglia != "4")
+            while (taglia != "1" && taglia != "2" && taglia != "3" && taglia != "4") //controlla che il numero inserito faccia parte dei numeri proposti
             {
                 Console.WriteLine("\nIl numero inserito non è valido; reinserire il numero.");
                 taglia = Convert.ToString(Console.ReadLine());
             }
 
+            //richiesta del materiale del capo
             Console.WriteLine("\nDi che materiale è il capo vuoi vendere?\n1 -> Cotone \n2 -> Lino\n3 -> Seta\n4 -> Pizzo\n5 -> Velluto\n6 -> Lana\n7 -> Maglia");
             string materiale = Convert.ToString(Console.ReadLine());
-            while (materiale != "1" && materiale != "2" && materiale != "3" && materiale != "4" && materiale != "5" && materiale != "6" && materiale != "7")
+            while (materiale != "1" && materiale != "2" && materiale != "3" && materiale != "4" && materiale != "5" && materiale != "6" && materiale != "7") //controlla che il numero inserito faccia parte dei numeri proposti
             {
                 Console.WriteLine("\nIl numero inserito non è valido; reinserire il numero.");
                 materiale = Convert.ToString(Console.ReadLine());
             }
 
+            //richiesta della raffinatezza del capo; se si tratta della raffinatezza di seta e lana si considerano solo le raffinatezze base e alta 
             string raffinatezza = " ";
             if(materiale == "3" || materiale == "6")
             {
                 Console.WriteLine("\nDi che raffinatezza è il capo vuoi vendere?\n1 -> Base \n2 -> Alta");
                 raffinatezza = Convert.ToString(Console.ReadLine());
-                while (raffinatezza != "1" && raffinatezza != "2")
+                while (raffinatezza != "1" && raffinatezza != "2") //controlla che il numero inserito faccia parte dei numeri proposti
                 {
                     Console.WriteLine("\nIl numero inserito non è valido; reinserire il numero.");
                     raffinatezza = Convert.ToString(Console.ReadLine());
@@ -3760,69 +3763,71 @@ namespace prototipo_magazzino
             else
             {
                 Console.WriteLine("\nDi che raffinatezza è il capo vuoi vendere?\n1 -> Base \n2 -> Media \n3 -> Alta");
-                raffinatezza = Convert.ToString(Console.ReadLine());
-                while (raffinatezza != "1" && raffinatezza != "2" && raffinatezza != "3")
+                raffinatezza = Convert.ToString(Console.ReadLine()); 
+                while (raffinatezza != "1" && raffinatezza != "2" && raffinatezza != "3") //controlla che il numero inserito faccia parte dei numeri proposti
                 {
                     Console.WriteLine("\nIl numero inserito non è valido; reinserire il numero.");
                     raffinatezza = Convert.ToString(Console.ReadLine());
                 }
             }
 
+            //variabili che verranno usate per calcolare il prezzo di produzione
             double colore = 1;
             double manodop = 3;
-            double prezzo = 0;
+            double prezzoprod = 0;
             double tesspertagl = 0;
             double prezzraff = 0;
 
+            //in base ai valori inseriti precedentemente viene valutata la metratura del capo
             switch (capo)
             {
-                case "1":
+                case "1": //felpa
                     switch (taglia)
                     {
-                        case "1":
+                        case "1": //S
                             tesspertagl = 2;
                             break;
-                        case "2":
+                        case "2": //M
                             tesspertagl = 2.2;
                             break;
-                        case "3":
+                        case "3": //L
                             tesspertagl = 2.5;
                             break;
-                        case "4":
+                        case "4": //XL
                             tesspertagl = 2.7;
                             break;
                     }
                     break;
-                case "2":
+                case "2": //giubbotto
                     switch (taglia)
                     {
-                        case "1":
+                        case "1": //S
                             tesspertagl = 2.5;
                             break;
-                        case "2":
+                        case "2": //M
                             tesspertagl = 2.8;
                             break;
-                        case "3":
+                        case "3": //L
                             tesspertagl = 3;
                             break;
-                        case "4":
+                        case "4": //XL
                             tesspertagl = 3.2;
                             break;
                     }
                     break;
-                case "3":
+                case "3": //pantaloni
                     switch (taglia)
                     {
-                        case "1":
+                        case "1": //S
                             tesspertagl = 1.2;
                             break;
-                        case "2":
+                        case "2": //M
                             tesspertagl = 1.5;
                             break;
-                        case "3":
+                        case "3": //L
                             tesspertagl = 1.6;
                             break;
-                        case "4":
+                        case "4": //XL
                             tesspertagl = 1.8;
                             break;
                     }
@@ -3832,103 +3837,104 @@ namespace prototipo_magazzino
 
             switch (materiale)
             {
-                case "1":
+                case "1": //cotone
                     switch (raffinatezza)
                     {
-                        case "1":
+                        case "1": //base
                             prezzraff = 2.5;
                             break;
-                        case "2":
+                        case "2": //media
                             prezzraff = 5;
                             break;
-                        case "3":
+                        case "3": //alta
                             prezzraff = 7;
                             break;
                     }
                     break;
-                case "2":
+                case "2": //lino
                     switch (raffinatezza)
                     {
-                        case "1":
+                        case "1": //base
                             prezzraff = 3;
                             break;
-                        case "2":
+                        case "2": //media
                             prezzraff = 6;
                             break;
-                        case "3":
+                        case "3": //alta
                             prezzraff = 10;
                             break;
                     }
                     break;
-                case "3":
+                case "3": //seta
                     switch (raffinatezza)
                     {
-                        case "1":
+                        case "1": //base
                             prezzraff = 11;
                             break;
-                        case "2":
+                        case "2": //alta
                             prezzraff = 22;
                             break;
                     }
                     break;
-                case "4":
+                case "4": //pizzo
                     switch (raffinatezza)
                     {
-                        case "1":
+                        case "1": //base
                             prezzraff = 1.5;
                             break;
-                        case "2":
+                        case "2": //media
                             prezzraff = 4;
                             break;
-                        case "3":
+                        case "3": //alta
                             prezzraff = 5.5;
                             break;
 
                     }
                     break;
-                case "5":
+                case "5": //velluto
                     switch (raffinatezza)
                     {
-                        case "1":
+                        case "1": //base
                             prezzraff = 4;
                             break;
-                        case "2":
+                        case "2": //media
                             prezzraff = 8;
                             break;
-                        case "3":
+                        case "3": //alta
                             prezzraff = 13;
                             break;
                     }
                     break;
-                case "6":
+                case "6": //lana
                     switch (raffinatezza)
                     {
-                        case "1":
+                        case "1": //base
                             prezzraff = 3;
                             break;
-                        case "2":
+                        case "2": //alta
                             prezzraff = 7;
                             break;
                     }
                     break;
-                case "7":
+                case "7": //maglia
                     switch (raffinatezza)
                     {
-                        case "1":
+                        case "1": //base
                             prezzraff = 3.5;
                             break;
-                        case "2":
+                        case "2": //media
                             prezzraff = 7;
                             break;
-                        case "3":
+                        case "3": //alta
                             prezzraff = 10;
                             break;
                     }
                     break;
             }
 
-            prezzo = manodop + colore + (tesspertagl*prezzraff);
-            Console.WriteLine(prezzo);
+            //calcolo del prezzo di produzione (manodopera + costo colorante + prezzo del tessuto in base a taglia e metratura del tipo di capo)
+            prezzoprod = manodop + colore + (tesspertagl*prezzraff);
+            Console.WriteLine(prezzoprod);
 
 
             Console.WriteLine("se vorrai uscire dal programma digita *, altrimenti digita un'altro numero del menù");
