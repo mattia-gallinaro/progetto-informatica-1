@@ -338,7 +338,7 @@ namespace prototipo_magazzino
                                     else
                                     {
                                         Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[1]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[1]);
+                                        Console.WriteLine("Ordina {0} metri di lino.", StoffaNeccessariaFelpe - stoffe[1]);
                                     }
                                     break;
 
@@ -370,8 +370,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[2]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[2]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di seta", StoffaNeccessariaFelpe - stoffe[2]);
+                                        Console.WriteLine("Ordina {0} metri di seta.", StoffaNeccessariaFelpe - stoffe[2]);
                                     }
                                     break;
 
@@ -411,8 +411,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[3]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[3]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di pizzo", StoffaNeccessariaFelpe - stoffe[3]);
+                                        Console.WriteLine("Ordina {0} metri di pizzo.", StoffaNeccessariaFelpe - stoffe[3]);
                                     }
                                     break;
 
@@ -452,8 +452,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[4]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[4]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di velluto", StoffaNeccessariaFelpe - stoffe[4]);
+                                        Console.WriteLine("Ordina {0} metri di velluto.", StoffaNeccessariaFelpe - stoffe[4]);
                                     }
                                     break;
 
@@ -484,8 +484,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[5]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[5]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lana", StoffaNeccessariaFelpe - stoffe[5]);
+                                        Console.WriteLine("Ordina {0} metri di lana.", StoffaNeccessariaFelpe - stoffe[5]);
                                     }
                                     break;
 
@@ -525,8 +525,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[6]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[6]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di maglia", StoffaNeccessariaFelpe - stoffe[6]);
+                                        Console.WriteLine("Ordina {0} metri di maglia.", StoffaNeccessariaFelpe - stoffe[6]);
                                     }
                                     break;
                             }
@@ -622,7 +622,7 @@ namespace prototipo_magazzino
                                     else
                                     {
                                         Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[1]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[1]);
+                                        Console.WriteLine("Ordina {0} metri di lino.", StoffaNeccessariaFelpe - stoffe[1]);
                                     }
                                     break;
 
@@ -654,8 +654,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[2]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[2]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di seta", StoffaNeccessariaFelpe - stoffe[2]);
+                                        Console.WriteLine("Ordina {0} metri di seta.", StoffaNeccessariaFelpe - stoffe[2]);
                                     }
                                     break;
 
@@ -695,8 +695,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[3]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[3]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di pizzo", StoffaNeccessariaFelpe - stoffe[3]);
+                                        Console.WriteLine("Ordina {0} metri di pizzo.", StoffaNeccessariaFelpe - stoffe[3]);
                                     }
                                     break;
 
@@ -736,8 +736,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[4]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[4]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di velluto", StoffaNeccessariaFelpe - stoffe[4]);
+                                        Console.WriteLine("Ordina {0} metri di velluto.", StoffaNeccessariaFelpe - stoffe[4]);
                                     }
                                     break;
 
@@ -768,8 +768,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[5]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[5]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lana", StoffaNeccessariaFelpe - stoffe[5]);
+                                        Console.WriteLine("Ordina {0} metri di lana.", StoffaNeccessariaFelpe - stoffe[5]);
                                     }
                                     break;
 
@@ -809,8 +809,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[6]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[6]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di maglia", StoffaNeccessariaFelpe - stoffe[6]);
+                                        Console.WriteLine("Ordina {0} metri di maglia.", StoffaNeccessariaFelpe - stoffe[6]);
                                     }
                                     break;
                             }
@@ -906,7 +906,7 @@ namespace prototipo_magazzino
                                     else
                                     {
                                         Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[1]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[1]);
+                                        Console.WriteLine("Ordina {0} metri di lino.", StoffaNeccessariaFelpe - stoffe[1]);
                                     }
                                     break;
 
@@ -938,8 +938,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[2]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[2]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di seta", StoffaNeccessariaFelpe - stoffe[2]);
+                                        Console.WriteLine("Ordina {0} metri di seta.", StoffaNeccessariaFelpe - stoffe[2]);
                                     }
                                     break;
 
@@ -979,8 +979,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[3]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[3]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di pizzo", StoffaNeccessariaFelpe - stoffe[3]);
+                                        Console.WriteLine("Ordina {0} metri di pizzo.", StoffaNeccessariaFelpe - stoffe[3]);
                                     }
                                     break;
 
@@ -1020,8 +1020,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[4]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[4]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di velluto", StoffaNeccessariaFelpe - stoffe[4]);
+                                        Console.WriteLine("Ordina {0} metri di velluto.", StoffaNeccessariaFelpe - stoffe[4]);
                                     }
                                     break;
 
@@ -1052,8 +1052,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[5]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[5]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lana", StoffaNeccessariaFelpe - stoffe[5]);
+                                        Console.WriteLine("Ordina {0} metri di lana.", StoffaNeccessariaFelpe - stoffe[5]);
                                     }
                                     break;
 
@@ -1093,8 +1093,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[6]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[6]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di maglia", StoffaNeccessariaFelpe - stoffe[6]);
+                                        Console.WriteLine("Ordina {0} metri di maglia.", StoffaNeccessariaFelpe - stoffe[6]);
                                     }
                                     break;
                             }
@@ -1190,7 +1190,7 @@ namespace prototipo_magazzino
                                     else
                                     {
                                         Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[1]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[1]);
+                                        Console.WriteLine("Ordina {0} metri di lino.", StoffaNeccessariaFelpe - stoffe[1]);
                                     }
                                     break;
 
@@ -1222,8 +1222,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[2]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[2]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di seta", StoffaNeccessariaFelpe - stoffe[2]);
+                                        Console.WriteLine("Ordina {0} metri di seta.", StoffaNeccessariaFelpe - stoffe[2]);
                                     }
                                     break;
 
@@ -1263,8 +1263,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[3]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[3]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di pizzo", StoffaNeccessariaFelpe - stoffe[3]);
+                                        Console.WriteLine("Ordina {0} metri di pizzo.", StoffaNeccessariaFelpe - stoffe[3]);
                                     }
                                     break;
 
@@ -1304,8 +1304,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[4]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[4]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di velluto", StoffaNeccessariaFelpe - stoffe[4]);
+                                        Console.WriteLine("Ordina {0} metri di velluto.", StoffaNeccessariaFelpe - stoffe[4]);
                                     }
                                     break;
 
@@ -1336,8 +1336,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[5]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[5]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lana", StoffaNeccessariaFelpe - stoffe[5]);
+                                        Console.WriteLine("Ordina {0} metri di lana.", StoffaNeccessariaFelpe - stoffe[5]);
                                     }
                                     break;
 
@@ -1377,8 +1377,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaFelpe - stoffe[6]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaFelpe - stoffe[6]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di maglia", StoffaNeccessariaFelpe - stoffe[6]);
+                                        Console.WriteLine("Ordina {0} metri di maglia.", StoffaNeccessariaFelpe - stoffe[6]);
                                     }
                                     break;
                             }
@@ -1480,7 +1480,7 @@ namespace prototipo_magazzino
                                     else
                                     {
                                         Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[1]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[1]);
+                                        Console.WriteLine("Ordina {0} metri di lino.", StoffaNeccessariaPantaloni - stoffe[1]);
                                     }
                                     break;
 
@@ -1512,8 +1512,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[2]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[2]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di seta", StoffaNeccessariaPantaloni - stoffe[2]);
+                                        Console.WriteLine("Ordina {0} metri di seta.", StoffaNeccessariaPantaloni - stoffe[2]);
                                     }
                                     break;
 
@@ -1553,8 +1553,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[3]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[3]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di pizzo", StoffaNeccessariaPantaloni - stoffe[3]);
+                                        Console.WriteLine("Ordina {0} metri di pizzo.", StoffaNeccessariaPantaloni - stoffe[3]);
                                     }
                                     break;
 
@@ -1594,8 +1594,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[4]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[4]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di velluto", StoffaNeccessariaPantaloni - stoffe[4]);
+                                        Console.WriteLine("Ordina {0} metri di velluto.", StoffaNeccessariaPantaloni - stoffe[4]);
                                     }
                                     break;
 
@@ -1626,8 +1626,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[5]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[5]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lana", StoffaNeccessariaPantaloni - stoffe[5]);
+                                        Console.WriteLine("Ordina {0} metri di lana.", StoffaNeccessariaPantaloni - stoffe[5]);
                                     }
                                     break;
 
@@ -1667,8 +1667,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[6]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[6]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di maglia", StoffaNeccessariaPantaloni - stoffe[6]);
+                                        Console.WriteLine("Ordina {0} metri di maglia.", StoffaNeccessariaPantaloni - stoffe[6]);
                                     }
                                     break;
                             }
@@ -1764,7 +1764,7 @@ namespace prototipo_magazzino
                                     else
                                     {
                                         Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[1]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[1]);
+                                        Console.WriteLine("Ordina {0} metri di lino.", StoffaNeccessariaPantaloni - stoffe[1]);
                                     }
                                     break;
 
@@ -1796,8 +1796,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[2]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[2]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di seta", StoffaNeccessariaPantaloni - stoffe[2]);
+                                        Console.WriteLine("Ordina {0} metri di seta.", StoffaNeccessariaPantaloni - stoffe[2]);
                                     }
                                     break;
 
@@ -1837,8 +1837,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[3]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[3]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di pizzo", StoffaNeccessariaPantaloni - stoffe[3]);
+                                        Console.WriteLine("Ordina {0} metri di pizzo.", StoffaNeccessariaPantaloni - stoffe[3]);
                                     }
                                     break;
 
@@ -1878,8 +1878,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[4]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[4]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di velluto", StoffaNeccessariaPantaloni - stoffe[4]);
+                                        Console.WriteLine("Ordina {0} metri di velluto.", StoffaNeccessariaPantaloni - stoffe[4]);
                                     }
                                     break;
 
@@ -1910,8 +1910,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[5]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[5]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lana", StoffaNeccessariaPantaloni - stoffe[5]);
+                                        Console.WriteLine("Ordina {0} metri di lana.", StoffaNeccessariaPantaloni - stoffe[5]);
                                     }
                                     break;
 
@@ -1951,8 +1951,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[6]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[6]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di maglia", StoffaNeccessariaPantaloni - stoffe[6]);
+                                        Console.WriteLine("Ordina {0} metri di maglia.", StoffaNeccessariaPantaloni - stoffe[6]);
                                     }
                                     break;
                             }
@@ -2048,7 +2048,7 @@ namespace prototipo_magazzino
                                     else
                                     {
                                         Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[1]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[1]);
+                                        Console.WriteLine("Ordina {0} metri di lino.", StoffaNeccessariaPantaloni - stoffe[1]);
                                     }
                                     break;
 
@@ -2080,8 +2080,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[2]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[2]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di seta", StoffaNeccessariaPantaloni - stoffe[2]);
+                                        Console.WriteLine("Ordina {0} metri di seta.", StoffaNeccessariaPantaloni - stoffe[2]);
                                     }
                                     break;
 
@@ -2121,8 +2121,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[3]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[3]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di pizzo", StoffaNeccessariaPantaloni - stoffe[3]);
+                                        Console.WriteLine("Ordina {0} metri di pizzo.", StoffaNeccessariaPantaloni - stoffe[3]);
                                     }
                                     break;
 
@@ -2162,8 +2162,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[4]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[4]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di velluto", StoffaNeccessariaPantaloni - stoffe[4]);
+                                        Console.WriteLine("Ordina {0} metri di velluto.", StoffaNeccessariaPantaloni - stoffe[4]);
                                     }
                                     break;
 
@@ -2194,8 +2194,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[5]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[5]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lana", StoffaNeccessariaPantaloni - stoffe[5]);
+                                        Console.WriteLine("Ordina {0} metri di lana.", StoffaNeccessariaPantaloni - stoffe[5]);
                                     }
                                     break;
 
@@ -2235,8 +2235,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[6]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[6]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di maglia", StoffaNeccessariaPantaloni - stoffe[6]);
+                                        Console.WriteLine("Ordina {0} metri di maglia.", StoffaNeccessariaPantaloni - stoffe[6]);
                                     }
                                     break;
                             }
@@ -2332,7 +2332,7 @@ namespace prototipo_magazzino
                                     else
                                     {
                                         Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[1]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[1]);
+                                        Console.WriteLine("Ordina {0} metri di lino.", StoffaNeccessariaPantaloni - stoffe[1]);
                                     }
                                     break;
 
@@ -2364,8 +2364,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[2]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[2]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di seta", StoffaNeccessariaPantaloni - stoffe[2]);
+                                        Console.WriteLine("Ordina {0} metri di seta.", StoffaNeccessariaPantaloni - stoffe[2]);
                                     }
                                     break;
 
@@ -2405,8 +2405,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[3]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[3]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di pizzo", StoffaNeccessariaPantaloni - stoffe[3]);
+                                        Console.WriteLine("Ordina {0} metri di pizzo.", StoffaNeccessariaPantaloni - stoffe[3]);
                                     }
                                     break;
 
@@ -2446,8 +2446,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[4]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[4]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di velluto", StoffaNeccessariaPantaloni - stoffe[4]);
+                                        Console.WriteLine("Ordina {0} metri di velluto.", StoffaNeccessariaPantaloni - stoffe[4]);
                                     }
                                     break;
 
@@ -2478,8 +2478,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[5]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[5]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lana", StoffaNeccessariaPantaloni - stoffe[5]);
+                                        Console.WriteLine("Ordina {0} metri di lana.", StoffaNeccessariaPantaloni - stoffe[5]);
                                     }
                                     break;
 
@@ -2519,8 +2519,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaPantaloni - stoffe[6]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaPantaloni - stoffe[6]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di maglia", StoffaNeccessariaPantaloni - stoffe[6]);
+                                        Console.WriteLine("Ordina {0} metri di maglia.", StoffaNeccessariaPantaloni - stoffe[6]);
                                     }
                                     break;
                             }
@@ -2621,7 +2621,7 @@ namespace prototipo_magazzino
                                     else
                                     {
                                         Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[1]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[1]);
+                                        Console.WriteLine("Ordina {0} metri di lino.", StoffaNeccessariaGiubbotti - stoffe[1]);
                                     }
                                     break;
 
@@ -2653,8 +2653,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[2]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[2]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di seta", StoffaNeccessariaGiubbotti - stoffe[2]);
+                                        Console.WriteLine("Ordina {0} metri di seta.", StoffaNeccessariaGiubbotti - stoffe[2]);
                                     }
                                     break;
 
@@ -2694,8 +2694,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[3]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[3]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di pizzo", StoffaNeccessariaGiubbotti - stoffe[3]);
+                                        Console.WriteLine("Ordina {0} metri di pizzo.", StoffaNeccessariaGiubbotti - stoffe[3]);
                                     }
                                     break;
 
@@ -2735,8 +2735,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[4]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[4]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di velluto", StoffaNeccessariaGiubbotti - stoffe[4]);
+                                        Console.WriteLine("Ordina {0} metri di velluto.", StoffaNeccessariaGiubbotti - stoffe[4]);
                                     }
                                     break;
 
@@ -2767,8 +2767,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[5]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[5]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lana", StoffaNeccessariaGiubbotti - stoffe[5]);
+                                        Console.WriteLine("Ordina {0} metri di lana.", StoffaNeccessariaGiubbotti - stoffe[5]);
                                     }
                                     break;
 
@@ -2808,8 +2808,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[6]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[6]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di maglia", StoffaNeccessariaGiubbotti - stoffe[6]);
+                                        Console.WriteLine("Ordina {0} metri di maglia.", StoffaNeccessariaGiubbotti - stoffe[6]);
                                     }
                                     break;
                             }
@@ -2905,7 +2905,7 @@ namespace prototipo_magazzino
                                     else
                                     {
                                         Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[1]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[1]);
+                                        Console.WriteLine("Ordina {0} metri di lino.", StoffaNeccessariaGiubbotti - stoffe[1]);
                                     }
                                     break;
 
@@ -2937,8 +2937,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[2]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[2]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di seta", StoffaNeccessariaGiubbotti - stoffe[2]);
+                                        Console.WriteLine("Ordina {0} metri di seta.", StoffaNeccessariaGiubbotti - stoffe[2]);
                                     }
                                     break;
 
@@ -2978,8 +2978,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[3]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[3]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di pizzo", StoffaNeccessariaGiubbotti - stoffe[3]);
+                                        Console.WriteLine("Ordina {0} metri di pizzo.", StoffaNeccessariaGiubbotti - stoffe[3]);
                                     }
                                     break;
 
@@ -3019,8 +3019,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[4]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[4]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di velluto", StoffaNeccessariaGiubbotti - stoffe[4]);
+                                        Console.WriteLine("Ordina {0} metri di velluto.", StoffaNeccessariaGiubbotti - stoffe[4]);
                                     }
                                     break;
 
@@ -3051,8 +3051,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[5]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[5]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lana", StoffaNeccessariaGiubbotti - stoffe[5]);
+                                        Console.WriteLine("Ordina {0} metri di lana.", StoffaNeccessariaGiubbotti - stoffe[5]);
                                     }
                                     break;
 
@@ -3092,8 +3092,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[6]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[6]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di maglia", StoffaNeccessariaGiubbotti - stoffe[6]);
+                                        Console.WriteLine("Ordina {0} metri di maglia.", StoffaNeccessariaGiubbotti - stoffe[6]);
                                     }
                                     break;
                             }
@@ -3188,7 +3188,7 @@ namespace prototipo_magazzino
                                     else
                                     {
                                         Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[1]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[1]);
+                                        Console.WriteLine("Ordina {0} metri di lino.", StoffaNeccessariaGiubbotti - stoffe[1]);
                                     }
                                     break;
 
@@ -3220,8 +3220,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[2]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[2]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di seta", StoffaNeccessariaGiubbotti - stoffe[2]);
+                                        Console.WriteLine("Ordina {0} metri di seta.", StoffaNeccessariaGiubbotti - stoffe[2]);
                                     }
                                     break;
 
@@ -3261,8 +3261,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[3]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[3]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di pizzo", StoffaNeccessariaGiubbotti - stoffe[3]);
+                                        Console.WriteLine("Ordina {0} metri di pizzo.", StoffaNeccessariaGiubbotti - stoffe[3]);
                                     }
                                     break;
 
@@ -3302,8 +3302,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[4]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[4]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di velluto", StoffaNeccessariaGiubbotti - stoffe[4]);
+                                        Console.WriteLine("Ordina {0} metri di velluto.", StoffaNeccessariaGiubbotti - stoffe[4]);
                                     }
                                     break;
 
@@ -3334,8 +3334,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[5]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[5]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lana", StoffaNeccessariaGiubbotti - stoffe[5]);
+                                        Console.WriteLine("Ordina {0} metri di lana.", StoffaNeccessariaGiubbotti - stoffe[5]);
                                     }
                                     break;
 
@@ -3376,8 +3376,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[6]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[6]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di maglia", StoffaNeccessariaGiubbotti - stoffe[6]);
+                                        Console.WriteLine("Ordina {0} metri di maglia.", StoffaNeccessariaGiubbotti - stoffe[6]);
                                     }
                                     break;
                             }
@@ -3472,7 +3472,7 @@ namespace prototipo_magazzino
                                     else
                                     {
                                         Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[1]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[1]);
+                                        Console.WriteLine("Ordina {0} metri di lino.", StoffaNeccessariaGiubbotti - stoffe[1]);
                                     }
                                     break;
 
@@ -3504,8 +3504,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[2]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[2]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di seta", StoffaNeccessariaGiubbotti - stoffe[2]);
+                                        Console.WriteLine("Ordina {0} metri di seta.", StoffaNeccessariaGiubbotti - stoffe[2]);
                                     }
                                     break;
 
@@ -3545,8 +3545,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[3]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[3]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di pizzo", StoffaNeccessariaGiubbotti - stoffe[3]);
+                                        Console.WriteLine("Ordina {0} metri di pizzo.", StoffaNeccessariaGiubbotti - stoffe[3]);
                                     }
                                     break;
 
@@ -3586,8 +3586,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[4]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[4]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di velluto", StoffaNeccessariaGiubbotti - stoffe[4]);
+                                        Console.WriteLine("Ordina {0} metri di velluto.", StoffaNeccessariaGiubbotti - stoffe[4]);
                                     }
                                     break;
 
@@ -3618,8 +3618,8 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[5]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[5]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lana", StoffaNeccessariaGiubbotti - stoffe[5]);
+                                        Console.WriteLine("Ordina {0} metri di lana.", StoffaNeccessariaGiubbotti - stoffe[5]);
                                     }
                                     break;
 
@@ -3659,14 +3659,14 @@ namespace prototipo_magazzino
                                     }
                                     else
                                     {
-                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di lino", StoffaNeccessariaGiubbotti - stoffe[6]);
-                                        Console.WriteLine("Ordina {0} metri di cotone.", StoffaNeccessariaGiubbotti - stoffe[6]);
+                                        Console.WriteLine("Non c'è abbastanza stoffa: ti mancano {0} metri di maglia", StoffaNeccessariaGiubbotti - stoffe[6]);
+                                        Console.WriteLine("Ordina {0} metri di maglia.", StoffaNeccessariaGiubbotti - stoffe[6]);
                                     }
                                     break;
                             }
 
                         }
-                        Console.ReadKey();
+                        //Console.ReadKey();
                     }
                     Console.WriteLine("Vuoi mandare in produzione altri abiti?");
                     RispostaProduzione = Convert.ToString(Console.ReadLine());
@@ -3700,8 +3700,9 @@ namespace prototipo_magazzino
                     }
                 }
             }
+            Console.ReadKey();
         }
-
+       
         static void Menù3()
         {
             Console.WriteLine("se vorrai uscire dal programma digita *, altrimenti digita un'altro numero del menù");
