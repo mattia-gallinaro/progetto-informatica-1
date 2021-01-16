@@ -1,0 +1,16 @@
+16/01/2021
+
+In magazzino sono presenti:
+1 metri di cotone;
+2 metri di lino;
+3 metri di seta;
+4 metri di pizzo;
+5 metri di velluto;
+6 metri di lana;
+7 metri di maglia;
+In magazzino ci sono 28 metri di stoffa e ci possono ancora stare 0 metri
+In magazzino ci sono 25 capi, di cui:
+8 felpe
+8 pantaloni
+9 giubbotti
+In magazzino ci possono ancora stare 0 capi
