@@ -3941,6 +3941,7 @@ namespace prototipo_magazzino
             Console.WriteLine("Prodotto a: {0}", prezzoprod);
             Console.WriteLine("Venduto a: {0}", prezzovend);
 
+            //SommaQuantitàCapi = felpe + pantaloni + giubbotti;
 
             Console.WriteLine("se vorrai uscire dal programma digita *, altrimenti digita un'altro numero del menù");
             string jolly;
