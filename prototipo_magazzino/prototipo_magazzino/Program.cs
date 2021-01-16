@@ -17,7 +17,9 @@ namespace prototipo_magazzino
         private static double SommaQuantitàStoffe = 0, SpazioRestanteMagazzinoStoffe;
         private static int SpazioRestanteMagazzinoCapi;
 
-        static string data, tipo, tagliafelpe, StoffaFelpe;
+        static string data, tipo, tagliafelpe, StoffaFelpe, tagliaPantaloni, StoffaPantaloni, tagliaGiubbotti, StoffaGiubbotti;
+
+        static string capo;
 
         private static int numero;
 
@@ -160,7 +162,7 @@ namespace prototipo_magazzino
             //comunico all'utente cosa c'è all'interno del menù
             Console.WriteLine("Menù");
             Console.WriteLine("Digita 1 se vuoi visualizzare la merce totale, in produzione e il magazzino occupato");
-            Console.WriteLine("Digita 2 se vuoi sapere quanta stoffa occorre per fare un capo");
+            Console.WriteLine("Digita 2 se vuoi mandare in produzione dei capi");
             Console.WriteLine("Digita 3 se vuoi sapere il prezzo dei capi che saranno venduti");
             Console.WriteLine("Digita 4 se vuoi visualizzare il profitto giornaliero");
             int NumeroMenù; //chiamo la variabile alla quale sarà assegnato il valore corrispondente al punto del menù che l'utente vuole mandare in esecuzione
@@ -192,9 +194,12 @@ namespace prototipo_magazzino
             Console.WriteLine("{0} metri di lana;", stoffe[5]);
             Console.WriteLine("{0} metri di maglia;", stoffe[6]);
 
-            //chiedo all'utente se ci sono dei capi in produzione
+            //comunico il magazzino occupato
+            Console.WriteLine("In magazzino ci sono {0} metri di stoffa e ci possono stare ancora {1} metri", SommaQuantitàStoffe, StoffeMaxMagazzino - SommaQuantitàStoffe);
+            Console.WriteLine("In magazzino ci sono {0} capi di cui: \nfelpe {1}; \npantaloni {2}; \ngiubbotti", SommaQuantitàCapi, felpe, pantaloni, giubbotti);
+
             string Capiproduzione; //creo la stringa a cui verrà assegnata la risposta
-            Console.WriteLine("Ci sono dei capi in produzione? (rispondere sempre con le lettere iniziali maiuscole)");
+            Console.WriteLine("Ci sono dei capi in produzione? (rispondere sempre con le lettere iniziali maiuscole)"); //chiedo all'utente se ci sono dei capi in produzione
             Capiproduzione = Convert.ToString(Console.ReadLine()); //viene acquisita la risposta da tastiera
             if (Capiproduzione == "Si")
             {   //se la risposta sarà Si allora chiedo all'utente quanti capi sono in produzione
@@ -539,7 +544,7 @@ namespace prototipo_magazzino
                             StoffaNeccessariaFelpe = numero * 2.20;
                             Console.WriteLine("occorrono {0} metri di stoffa", StoffaNeccessariaFelpe);
                             string StoffaFelpe;
-                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (scrivere il nome del tessuto con la lettera iniziale maiuscola)");
+                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (Cotone, Lino, Seta, Pizzo, Velluto, Lana, Maglia)");
                             StoffaFelpe = Convert.ToString(Console.ReadLine());
                             switch (StoffaFelpe)
                             {
@@ -823,7 +828,7 @@ namespace prototipo_magazzino
                             StoffaNeccessariaFelpe = numero * 2.50;
                             Console.WriteLine("occorrono {0} metri di stoffa", StoffaNeccessariaFelpe);
                             string StoffaFelpe;
-                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (scrivere il nome del tessuto con la lettera iniziale maiuscola)");
+                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (Cotone, Lino, Seta, Pizzo, Velluto, Lana, Maglia)");
                             StoffaFelpe = Convert.ToString(Console.ReadLine());
                             switch (StoffaFelpe)
                             {
@@ -1107,7 +1112,7 @@ namespace prototipo_magazzino
                             StoffaNeccessariaFelpe = numero * 2.70;
                             Console.WriteLine("occorrono {0} metri di stoffa", StoffaNeccessariaFelpe);
                             string StoffaFelpe;
-                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (scrivere il nome del tessuto con la lettera iniziale maiuscola)");
+                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (Cotone, Lino, Seta, Pizzo, Velluto, Lana, Maglia)");
                             StoffaFelpe = Convert.ToString(Console.ReadLine());
                             switch (StoffaFelpe)
                             {
@@ -1384,11 +1389,13 @@ namespace prototipo_magazzino
                             }
 
                         }
+                        int b = felpe;
+                        felpe = 0;                        
+                        felpe = b + numero; //aggiungo le felpe prodotte nella qunatità di felpe già presenti in magazzino
                     }
 
                     if (tipo == "Pantaloni")
                     {
-                        string tagliaPantaloni;
                         Console.WriteLine("di che taglia? (scrivi la taglia in maiuscolo; le taglie sono: S, M; L; XL)");
                         tagliaPantaloni = Convert.ToString(Console.ReadLine());
                         if (tagliaPantaloni == "S")
@@ -1396,8 +1403,7 @@ namespace prototipo_magazzino
                             double StoffaNeccessariaPantaloni;
                             StoffaNeccessariaPantaloni = numero * 1.20;
                             Console.WriteLine("occorrono {0} metri di stoffa", StoffaNeccessariaPantaloni);
-                            string StoffaPantaloni;
-                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (scrivere il nome del tessuto con la lettera iniziale maiuscola)");
+                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (Cotone, Lino, Seta, Pizzo, Velluto, Lana, Maglia)");
                             StoffaPantaloni = Convert.ToString(Console.ReadLine());
                             switch (StoffaPantaloni)
                             {
@@ -1681,7 +1687,7 @@ namespace prototipo_magazzino
                             StoffaNeccessariaPantaloni = numero * 1.5;
                             Console.WriteLine("occorrono {0} metri di stoffa", StoffaNeccessariaPantaloni);
                             string StoffaPantaloni;
-                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (scrivere il nome del tessuto con la lettera iniziale maiuscola)");
+                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (Cotone, Lino, Seta, Pizzo, Velluto, Lana, Maglia)");
                             StoffaPantaloni = Convert.ToString(Console.ReadLine());
                             switch (StoffaPantaloni)
                             {
@@ -1965,7 +1971,7 @@ namespace prototipo_magazzino
                             StoffaNeccessariaPantaloni = numero * 1.60;
                             Console.WriteLine("occorrono {0} metri di stoffa", StoffaNeccessariaPantaloni);
                             string StoffaPantaloni;
-                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (scrivere il nome del tessuto con la lettera iniziale maiuscola)");
+                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (Cotone, Lino, Seta, Pizzo, Velluto, Lana, Maglia)");
                             StoffaPantaloni = Convert.ToString(Console.ReadLine());
                             switch (StoffaPantaloni)
                             {
@@ -2249,7 +2255,7 @@ namespace prototipo_magazzino
                             StoffaNeccessariaPantaloni = numero * 1.8;
                             Console.WriteLine("occorrono {0} metri di stoffa", StoffaNeccessariaPantaloni);
                             string StoffaPantaloni;
-                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (scrivere il nome del tessuto con la lettera iniziale maiuscola)");
+                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (Cotone, Lino, Seta, Pizzo, Velluto, Lana, Maglia)");
                             StoffaPantaloni = Convert.ToString(Console.ReadLine());
                             switch (StoffaPantaloni)
                             {
@@ -2526,10 +2532,12 @@ namespace prototipo_magazzino
                             }
 
                         }
+                        int b = pantaloni;
+                        pantaloni = 0;
+                        pantaloni = b + numero; //aggiungo i pantaloni in produzione al numero dei pantaloni
                     }
                     if (tipo == "Giubbotti")
                     {
-                        string tagliaGiubbotti;
                         Console.WriteLine("di che taglia? (scrivi la taglia in maiuscolo; le taglie sono: S, M; L; XL)");
                         tagliaGiubbotti = Convert.ToString(Console.ReadLine());
                         if (tagliaGiubbotti == "S")
@@ -2537,8 +2545,7 @@ namespace prototipo_magazzino
                             double StoffaNeccessariaGiubbotti;
                             StoffaNeccessariaGiubbotti = numero * 2.5;
                             Console.WriteLine("occorrono {0} metri di stoffa", StoffaNeccessariaGiubbotti);
-                            string StoffaGiubbotti;
-                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (scrivere il nome del tessuto con la lettera iniziale maiuscola)");
+                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (Cotone, Lino, Seta, Pizzo, Velluto, Lana, Maglia)");
                             StoffaGiubbotti = Convert.ToString(Console.ReadLine());
                             switch (StoffaGiubbotti)
                             {
@@ -2822,7 +2829,7 @@ namespace prototipo_magazzino
                             StoffaNeccessariaGiubbotti = numero * 2.8;
                             Console.WriteLine("occorrono {0} metri di stoffa", StoffaNeccessariaGiubbotti);
                             string StoffaGiubbotti;
-                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (scrivere il nome del tessuto con la lettera iniziale maiuscola)");
+                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (Cotone, Lino, Seta, Pizzo, Velluto, Lana, Maglia)");
                             StoffaGiubbotti = Convert.ToString(Console.ReadLine());
                             switch (StoffaGiubbotti)
                             {
@@ -3105,7 +3112,7 @@ namespace prototipo_magazzino
                             StoffaNeccessariaGiubbotti = numero * 3;
                             Console.WriteLine("occorrono {0} metri di stoffa", StoffaNeccessariaGiubbotti);
                             string StoffaGiubbotti;
-                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (scrivere il nome del tessuto con la lettera iniziale maiuscola)");
+                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (Cotone, Lino, Seta, Pizzo, Velluto, Lana, Maglia)");
                             StoffaGiubbotti = Convert.ToString(Console.ReadLine());
                             switch (StoffaGiubbotti)
                             {
@@ -3389,7 +3396,7 @@ namespace prototipo_magazzino
                             StoffaNeccessariaGiubbotti = numero * 3.2;
                             Console.WriteLine("occorrono {0} metri di stoffa", StoffaNeccessariaGiubbotti);
                             string StoffaGiubbotti;
-                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (scrivere il nome del tessuto con la lettera iniziale maiuscola)");
+                            Console.WriteLine("Di che stoffa dovrà essere prodotto il capo? (Cotone, Lino, Seta, Pizzo, Velluto, Lana, Maglia)");
                             StoffaGiubbotti = Convert.ToString(Console.ReadLine());
                             switch (StoffaGiubbotti)
                             {
@@ -3666,10 +3673,22 @@ namespace prototipo_magazzino
                             }
 
                         }
-                        //Console.ReadKey();
+                        int b = giubbotti;
+                        giubbotti = 0;
+                        giubbotti = b + numero; //aggiungo i giubbotti in produzione al numero dei giubbotti;
                     }
                     Console.WriteLine("Vuoi mandare in produzione altri abiti?");
                     RispostaProduzione = Convert.ToString(Console.ReadLine());
+
+                    SommaQuantitàStoffe = 0;
+                    int a; //variabile utile per il for
+                    for (a = 0; a < 7; a++)
+                    {
+                        SommaQuantitàStoffe = stoffe[a] + SommaQuantitàStoffe; //calcolo della quantità di stoffa presente in magazzino
+                    }
+                    
+                    SommaQuantitàCapi = 0;
+                    SommaQuantitàCapi = felpe + pantaloni + giubbotti; //calclo della quantità di capi in magazzino aggiungendo quelli che erano in produzione
                 } while (RispostaProduzione == "Si");//se l'utente risponderà di si alla domanda... potrà mandare in esecuzione altri abiti
             }
             else
@@ -3707,7 +3726,7 @@ namespace prototipo_magazzino
         {
             //richiesta del tipo di capo da vendere
             Console.Write("\nChe tipo di capo vuoi vendere?\n1 -> Felpa \n2 -> Giubbotto\n3 -> Pantaloni\nRisposta: ");
-            string capo = Convert.ToString(Console.ReadLine());
+            capo = Convert.ToString(Console.ReadLine());
             while (capo != "1" && capo != "2" && capo != "3") //controlla che il numero inserito faccia parte dei numeri proposti
             {
                 Console.Write("\nIl numero inserito non è valido; reinserire il numero.\nRisposta: ");
@@ -3999,9 +4018,31 @@ namespace prototipo_magazzino
             streamwriter.WriteLine("{0} pantaloni", pantaloni);
             streamwriter.WriteLine("{0} giubbotti", giubbotti);
             streamwriter.WriteLine("In magazzino ci possono ancora stare {0} capi", SpazioRestanteMagazzinoCapi);
+
             if (tipo == "Felpe")
             {
                 streamwriter.WriteLine("I capi in produzione sono {0}: sono taglia {1}; sono {2}; sono fatte di {3}", numero, tagliafelpe, tipo, StoffaFelpe);
+            }
+            if (tipo == "Pantaloni")
+            {
+                streamwriter.WriteLine("I capi in produzione sono {0}: sono taglia {1}; sono {2}; sono fatte di {3}", numero, tagliaPantaloni, tipo, StoffaPantaloni);
+            }
+            if (tipo == "Giubbotti")
+            {
+                streamwriter.WriteLine("I capi in produzione sono {0}: sono taglia {1}; sono {2}; sono fatte di {3}", numero, tagliaGiubbotti, tipo, StoffaGiubbotti);
+            }
+
+            if (capo == "1")
+            {
+                streamwriter.WriteLine("La felpa è stata venduta a {0} euro", prezzovend);
+            }
+            if (capo == "2")
+            {
+                streamwriter.WriteLine("Il pantalone è stato venduto a {0} euro", prezzovend);
+            }
+            if (capo == "3")
+            {
+                streamwriter.WriteLine("Il giubbotto è stato venduto a {0} euro", prezzovend);
             }
             streamwriter.Close();
         }
