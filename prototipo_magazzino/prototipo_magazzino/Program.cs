@@ -12,7 +12,7 @@ namespace prototipo_magazzino
         private static int felpe, giubbotti, pantaloni;
 
         private static int capivenduti;
-
+        private static double prezzovend = 0, prezzoprod = 0;
         private static int StoffeMaxMagazzino = 300, CapiMaxMagazzino = 200, SommaQuantitàCapi = 0;
         private static double SommaQuantitàStoffe = 0, SpazioRestanteMagazzinoStoffe;
         private static int SpazioRestanteMagazzinoCapi;
@@ -3705,6 +3705,224 @@ namespace prototipo_magazzino
        
         static void Menù3()
         {
+            //richiesta del tipo di capo da vendere
+            Console.Write("\nChe tipo di capo vuoi vendere?\n1 -> Felpa \n2 -> Giubbotto\n3 -> Pantaloni\nRisposta: ");
+            string capo = Convert.ToString(Console.ReadLine());
+            while (capo != "1" && capo != "2" && capo != "3") //controlla che il numero inserito faccia parte dei numeri proposti
+            {
+                Console.Write("\nIl numero inserito non è valido; reinserire il numero.\nRisposta: ");
+                capo = Convert.ToString(Console.ReadLine());
+            }
+
+            //richiesta della taglia del capo
+            Console.Write("\nDi che taglia è il capo che vuoi vendere?\n1 -> S \n2 -> M\n3 -> L\n4 -> XL\nRisposta: ");
+            string taglia = Convert.ToString(Console.ReadLine());
+            while (taglia != "1" && taglia != "2" && taglia != "3" && taglia != "4") //controlla che il numero inserito faccia parte dei numeri proposti
+            {
+                Console.Write("\nIl numero inserito non è valido; reinserire il numero.\nRisposta: ");
+                taglia = Convert.ToString(Console.ReadLine());
+            }
+
+            //richiesta del materiale del capo
+            Console.Write("\nDi che materiale è il capo che vuoi vendere?\n1 -> Cotone \n2 -> Lino\n3 -> Seta\n4 -> Pizzo\n5 -> Velluto\n6 -> Lana\n7 -> Maglia\nRisposta: ");
+            string materiale = Convert.ToString(Console.ReadLine());
+            while (materiale != "1" && materiale != "2" && materiale != "3" && materiale != "4" && materiale != "5" && materiale != "6" && materiale != "7") //controlla che il numero inserito faccia parte dei numeri proposti
+            {
+                Console.Write("\nIl numero inserito non è valido; reinserire il numero.\nRisposta: ");
+                materiale = Convert.ToString(Console.ReadLine());
+            }
+
+            //richiesta della raffinatezza del capo; se si tratta della raffinatezza di seta e lana si considerano solo le raffinatezze base e alta 
+            string raffinatezza = " ";
+            if (materiale == "3" || materiale == "6")
+            {
+                Console.Write("\nDi che raffinatezza è il capo che vuoi vendere?\n1 -> Base \n2 -> Alta\nRisposta: ");
+                raffinatezza = Convert.ToString(Console.ReadLine());
+                while (raffinatezza != "1" && raffinatezza != "2") //controlla che il numero inserito faccia parte dei numeri proposti
+                {
+                    Console.Write("\nIl numero inserito non è valido; reinserire il numero.\nRisposta: ");
+                    raffinatezza = Convert.ToString(Console.ReadLine());
+                }
+            }
+            else
+            {
+                Console.Write("\nDi che raffinatezza è il capo che vuoi vendere?\n1 -> Base \n2 -> Media \n3 -> Alta\nRisposta: ");
+                raffinatezza = Convert.ToString(Console.ReadLine());
+                while (raffinatezza != "1" && raffinatezza != "2" && raffinatezza != "3") //controlla che il numero inserito faccia parte dei numeri proposti
+                {
+                    Console.Write("\nIl numero inserito non è valido; reinserire il numero.\nRisposta: ");
+                    raffinatezza = Convert.ToString(Console.ReadLine());
+                }
+            }
+
+            //variabili che verranno usate per calcolare il prezzo di produzione
+            double colore = 1;
+            double manodop = 3;
+            double tesspertagl = 0;
+            double prezzraff = 0;
+
+            //in base ai valori inseriti precedentemente viene valutata la metratura del capo
+            switch (capo)
+            {
+                case "1": //felpa
+                    switch (taglia)
+                    {
+                        case "1": //S
+                            tesspertagl = 2;
+                            break;
+                        case "2": //M
+                            tesspertagl = 2.2;
+                            break;
+                        case "3": //L
+                            tesspertagl = 2.5;
+                            break;
+                        case "4": //XL
+                            tesspertagl = 2.7;
+                            break;
+                    }
+                    break;
+                case "2": //giubbotto
+                    switch (taglia)
+                    {
+                        case "1": //S
+                            tesspertagl = 2.5;
+                            break;
+                        case "2": //M
+                            tesspertagl = 2.8;
+                            break;
+                        case "3": //L
+                            tesspertagl = 3;
+                            break;
+                        case "4": //XL
+                            tesspertagl = 3.2;
+                            break;
+                    }
+                    break;
+                case "3": //pantaloni
+                    switch (taglia)
+                    {
+                        case "1": //S
+                            tesspertagl = 1.2;
+                            break;
+                        case "2": //M
+                            tesspertagl = 1.5;
+                            break;
+                        case "3": //L
+                            tesspertagl = 1.6;
+                            break;
+                        case "4": //XL
+                            tesspertagl = 1.8;
+                            break;
+                    }
+                    break;
+
+            }
+
+            switch (materiale)
+            {
+                case "1": //cotone
+                    switch (raffinatezza)
+                    {
+                        case "1": //base
+                            prezzraff = 2.5;
+                            break;
+                        case "2": //media
+                            prezzraff = 5;
+                            break;
+                        case "3": //alta
+                            prezzraff = 7;
+                            break;
+                    }
+                    break;
+                case "2": //lino
+                    switch (raffinatezza)
+                    {
+                        case "1": //base
+                            prezzraff = 3;
+                            break;
+                        case "2": //media
+                            prezzraff = 6;
+                            break;
+                        case "3": //alta
+                            prezzraff = 10;
+                            break;
+                    }
+                    break;
+                case "3": //seta
+                    switch (raffinatezza)
+                    {
+                        case "1": //base
+                            prezzraff = 11;
+                            break;
+                        case "2": //alta
+                            prezzraff = 22;
+                            break;
+                    }
+                    break;
+                case "4": //pizzo
+                    switch (raffinatezza)
+                    {
+                        case "1": //base
+                            prezzraff = 1.5;
+                            break;
+                        case "2": //media
+                            prezzraff = 4;
+                            break;
+                        case "3": //alta
+                            prezzraff = 5.5;
+                            break;
+
+                    }
+                    break;
+                case "5": //velluto
+                    switch (raffinatezza)
+                    {
+                        case "1": //base
+                            prezzraff = 4;
+                            break;
+                        case "2": //media
+                            prezzraff = 8;
+                            break;
+                        case "3": //alta
+                            prezzraff = 13;
+                            break;
+                    }
+                    break;
+                case "6": //lana
+                    switch (raffinatezza)
+                    {
+                        case "1": //base
+                            prezzraff = 3;
+                            break;
+                        case "2": //alta
+                            prezzraff = 7;
+                            break;
+                    }
+                    break;
+                case "7": //maglia
+                    switch (raffinatezza)
+                    {
+                        case "1": //base
+                            prezzraff = 3.5;
+                            break;
+                        case "2": //media
+                            prezzraff = 7;
+                            break;
+                        case "3": //alta
+                            prezzraff = 10;
+                            break;
+                    }
+                    break;
+            }
+
+            //calcolo del prezzo di produzione (manodopera + costo colorante + prezzo del tessuto in base a taglia e metratura del tipo di capo)
+            prezzoprod = manodop + colore + (tesspertagl * prezzraff);
+            prezzovend = prezzoprod * 7;
+
+            Console.WriteLine("Prodotto a: {0}", prezzoprod);
+            Console.WriteLine("Venduto a: {0}", prezzovend);
+
+
             Console.WriteLine("se vorrai uscire dal programma digita *, altrimenti digita un'altro numero del menù");
             string jolly;
             jolly = Convert.ToString(Console.ReadLine());
@@ -3763,10 +3981,11 @@ namespace prototipo_magazzino
 
         static void SalvataggioSuFile()
         {
-            string FileSalvataggio = @"C:\Users\Michele Gabrieli\OneDrive\Documenti\GitHub\progetto-informatica-1\FileSalvataggio";//dove salvo il file
-            StreamWriter streamwriter = new StreamWriter(FileSalvataggio, true);//creo file e metto true in modo che non sovrascriva le stringhe nel file.
+            string filename = @"FileSalvataggio.txt";
+            string filePath = AppDomain.CurrentDomain.BaseDirectory + filename;
+            StreamWriter streamwriter = new StreamWriter(filePath, true);//creo file e metto true in modo che non sovrascriva le stringhe nel file.
             streamwriter.WriteLine(data);//scrivo la data
-            streamwriter.WriteLine("In magazzino sono presenti:");
+            streamwriter.WriteLine("\nIn magazzino sono presenti:");
             streamwriter.WriteLine("{0} metri di cotone;", stoffe[0]);
             streamwriter.WriteLine("{0} metri di lino;", stoffe[1]);
             streamwriter.WriteLine("{0} metri di seta;", stoffe[2]);

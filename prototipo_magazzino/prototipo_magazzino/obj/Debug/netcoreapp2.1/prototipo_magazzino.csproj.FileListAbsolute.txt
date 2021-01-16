@@ -31,3 +31,14 @@ C:\Users\giuri\OneDrive\Desktop\cartella vuota\progetto-informatica-1\prototipo_
 C:\Users\giuri\OneDrive\Desktop\cartella vuota\progetto-informatica-1\prototipo_magazzino\prototipo_magazzino\obj\Debug\netcoreapp2.1\prototipo_magazzino.AssemblyInfo.cs
 C:\Users\giuri\OneDrive\Desktop\cartella vuota\progetto-informatica-1\prototipo_magazzino\prototipo_magazzino\obj\Debug\netcoreapp2.1\prototipo_magazzino.dll
 C:\Users\giuri\OneDrive\Desktop\cartella vuota\progetto-informatica-1\prototipo_magazzino\prototipo_magazzino\obj\Debug\netcoreapp2.1\prototipo_magazzino.pdb
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\prototipo_magazzino\prototipo_magazzino\bin\Debug\netcoreapp2.1\prototipo_magazzino.deps.json
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\prototipo_magazzino\prototipo_magazzino\bin\Debug\netcoreapp2.1\prototipo_magazzino.runtimeconfig.json
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\prototipo_magazzino\prototipo_magazzino\bin\Debug\netcoreapp2.1\prototipo_magazzino.runtimeconfig.dev.json
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\prototipo_magazzino\prototipo_magazzino\bin\Debug\netcoreapp2.1\prototipo_magazzino.dll
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\prototipo_magazzino\prototipo_magazzino\bin\Debug\netcoreapp2.1\prototipo_magazzino.pdb
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\prototipo_magazzino\prototipo_magazzino\obj\Debug\netcoreapp2.1\prototipo_magazzino.csprojAssemblyReference.cache
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\prototipo_magazzino\prototipo_magazzino\obj\Debug\netcoreapp2.1\prototipo_magazzino.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\prototipo_magazzino\prototipo_magazzino\obj\Debug\netcoreapp2.1\prototipo_magazzino.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\prototipo_magazzino\prototipo_magazzino\obj\Debug\netcoreapp2.1\prototipo_magazzino.AssemblyInfo.cs
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\prototipo_magazzino\prototipo_magazzino\obj\Debug\netcoreapp2.1\prototipo_magazzino.dll
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\prototipo_magazzino\prototipo_magazzino\obj\Debug\netcoreapp2.1\prototipo_magazzino.pdb

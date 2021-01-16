@@ -688,23 +688,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\giuri\\.nuget\\packages\\": {},
+    "C:\\Users\\HP\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\giuri\\OneDrive\\Desktop\\cartella vuota\\progetto-informatica-1\\prototipo_magazzino\\prototipo_magazzino\\prototipo_magazzino.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Documents\\GitHub\\progetto-informatica-1\\prototipo_magazzino\\prototipo_magazzino\\prototipo_magazzino.csproj",
       "projectName": "prototipo_magazzino",
-      "projectPath": "C:\\Users\\giuri\\OneDrive\\Desktop\\cartella vuota\\progetto-informatica-1\\prototipo_magazzino\\prototipo_magazzino\\prototipo_magazzino.csproj",
-      "packagesPath": "C:\\Users\\giuri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\giuri\\OneDrive\\Desktop\\cartella vuota\\progetto-informatica-1\\prototipo_magazzino\\prototipo_magazzino\\obj\\",
+      "projectPath": "C:\\Users\\HP\\Documents\\GitHub\\progetto-informatica-1\\prototipo_magazzino\\prototipo_magazzino\\prototipo_magazzino.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HP\\Documents\\GitHub\\progetto-informatica-1\\prototipo_magazzino\\prototipo_magazzino\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\giuri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
