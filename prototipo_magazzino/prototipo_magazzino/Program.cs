@@ -13,7 +13,7 @@ namespace prototipo_magazzino
         private static int felpe, giubbotti, pantaloni;
 
         private static int capivenduti;
-        private static double prezzovend = 0, prezzoprod = 0;
+        private static double prezzovend = 0, prezzoprod = 0, profittoGiorn = 0;
         private static int StoffeMaxMagazzino = 300, CapiMaxMagazzino = 200, SommaQuantitàCapi = 0;
         private static double SommaQuantitàStoffe = 0, SpazioRestanteMagazzinoStoffe;
         private static int SpazioRestanteMagazzinoCapi;
@@ -197,7 +197,9 @@ namespace prototipo_magazzino
 
             //comunico il magazzino occupato
             Console.WriteLine("In magazzino ci sono {0} metri di stoffa e ci possono stare ancora {1} metri", SommaQuantitàStoffe, StoffeMaxMagazzino - SommaQuantitàStoffe);
-            Console.WriteLine("In magazzino ci sono {0} capi di cui: \nfelpe {1}; \npantaloni {2}; \ngiubbotti", SommaQuantitàCapi, felpe, pantaloni, giubbotti);
+            Console.WriteLine("In magazzino ci sono {0} capi di cui: \nfelpe {1}; \npantaloni {2}; \ngiubbotti {3}", SommaQuantitàCapi, felpe, pantaloni, giubbotti);
+            Console.WriteLine("Sono stati venduti {0} capi", capivenduti);
+            Console.WriteLine("Il profitto giornaliero è di {0} euro.", profittoGiorn);
 
             string Capiproduzione; //creo la stringa a cui verrà assegnata la risposta
             Console.WriteLine("Ci sono dei capi in produzione? (rispondere sempre con le lettere iniziali maiuscole)"); //chiedo all'utente se ci sono dei capi in produzione
@@ -3895,6 +3897,7 @@ namespace prototipo_magazzino
             prezzoprod = (manodop + colore + (tesspertagl * prezzraff))*quantCapi;
             prezzovend = prezzoprod * 7;
             capivenduti += quantCapi;
+            profittoGiorn += prezzovend;
 
             Console.WriteLine("Prodotto a: {0}", prezzoprod);
             Console.WriteLine("Venduto a: {0}", prezzovend);
