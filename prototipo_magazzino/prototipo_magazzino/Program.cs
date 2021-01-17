@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Globalization;
 
 namespace prototipo_magazzino
 {
@@ -208,31 +209,8 @@ namespace prototipo_magazzino
                 numero = Convert.ToInt32(Console.ReadLine());
             }
 
-            Console.WriteLine("se vorrai uscire dal programma digita *, altrimenti digita un'altro numero del menù"); //chiedo all'utente se vuole proseguire a navigare il menù o se vuole chiudere il programma
-            string jolly; //creo la stringa a cui verrà assegnata la risposta
-            jolly = Convert.ToString(Console.ReadLine());
-            if (jolly == "*") // se l'utente inserirà *
-            {
-                SalvataggioSuFile();
-                System.Environment.Exit(1); //allora il programma verrà chiuso
+            carattereJolly();
 
-            }
-            else 
-            {   //altrimenti potrà continuare a trascorrere il menù
-                switch (jolly)
-                {
-                    case "2":
-                        Menù2();
-                        break;
-                    case "3":
-                        Menù3();
-                        break;
-                    case "4":
-                        Menù4();
-                        break;
-
-                }
-            }
         }
 
         static void Menù2()
@@ -3693,37 +3671,17 @@ namespace prototipo_magazzino
             }
             else
             {
-                Console.WriteLine("se vorrai uscire dal programma digita *, altrimenti digita un'altro numero del menù");
-                string jolly;
-                jolly = Convert.ToString(Console.ReadLine());
-                if (jolly == "*")
-                {
-                    SalvataggioSuFile();
-                    System.Environment.Exit(1);
-
-                }
-                else
-                {
-                    switch (jolly)
-                    {
-                        case "1":
-                            Menù1();
-                            break;
-                        case "3":
-                            Menù3();
-                            break;
-                        case "4":
-                            Menù4();
-                            break;
-
-                    }
-                }
+                carattereJolly();
             }
             Console.ReadKey();
         }
        
         static void Menù3()
         {
+
+            Console.Write("Quanti capi vuoi vendere?\nRisposta: ");
+            int quantCapi = Convert.ToInt32(Console.ReadLine());    
+
             //richiesta del tipo di capo da vendere
             Console.Write("\nChe tipo di capo vuoi vendere?\n1 -> Felpa \n2 -> Giubbotto\n3 -> Pantaloni\nRisposta: ");
             capo = Convert.ToString(Console.ReadLine());
@@ -3774,11 +3732,10 @@ namespace prototipo_magazzino
                 }
             }
 
+               
+
             //variabili che verranno usate per calcolare il prezzo di produzione
-            double colore = 1;
-            double manodop = 3;
-            double tesspertagl = 0;
-            double prezzraff = 0;
+            double manodop = 3, prezzraff = 0, tesspertagl = 0, colore = 1;
 
             //in base ai valori inseriti precedentemente viene valutata la metratura del capo
             switch (capo)
@@ -3935,68 +3892,39 @@ namespace prototipo_magazzino
             }
 
             //calcolo del prezzo di produzione (manodopera + costo colorante + prezzo del tessuto in base a taglia e metratura del tipo di capo)
-            prezzoprod = manodop + colore + (tesspertagl * prezzraff);
+            prezzoprod = (manodop + colore + (tesspertagl * prezzraff))*quantCapi;
             prezzovend = prezzoprod * 7;
+            capivenduti += quantCapi;
 
             Console.WriteLine("Prodotto a: {0}", prezzoprod);
             Console.WriteLine("Venduto a: {0}", prezzovend);
 
             //SommaQuantitàCapi = felpe + pantaloni + giubbotti;
 
-            Console.WriteLine("se vorrai uscire dal programma digita *, altrimenti digita un'altro numero del menù");
-            string jolly;
-            jolly = Convert.ToString(Console.ReadLine());
-            if (jolly == "*")
-            {
-                SalvataggioSuFile();
-                System.Environment.Exit(1);
-
-            }
-            else
-            {
-                switch (jolly)
-                {
-                    case "1":
-                        Menù1();
-                        break;
-                    case "2":
-                        Menù2();
-                        break;
-                    case "4":
-                        Menù4();
-                        break;
-
-                }
-            }
+            carattereJolly();
         }
 
         static void Menù4()
         {
-            Console.WriteLine("se vorrai uscire dal programma digita *, altrimenti digita un'altro numero del menù");
-            string jolly;
-            jolly = Convert.ToString(Console.ReadLine());
-            if (jolly == "*")
-            {
-                SalvataggioSuFile();
-                System.Environment.Exit(1);
+            carattereJolly();
+        }
 
-            }
-            else
+        static void carattereJolly()
+        {
+            Console.WriteLine("Digitare '*' per uscire dal programma; digitare altro per navigare di nuovo il menù.");
+            string jolly = Convert.ToString(Console.ReadLine());
+            switch (jolly)
             {
-                switch (jolly)
-                {
-                    case "1":
-                        Menù1();
-                        break;
-                    case "2":
-                        Menù2();
-                        break;
-                    case "3":
-                        Menù3();
-                        break;
-
-                }
+                case "*":
+                    SalvataggioSuFile();
+                    System.Environment.Exit(1);
+                    break;
+                default:
+                    Console.Clear();
+                    NavigazioneDichiarazioneMenù();
+                    break;
             }
+            
         }
 
         static void SalvataggioSuFile()

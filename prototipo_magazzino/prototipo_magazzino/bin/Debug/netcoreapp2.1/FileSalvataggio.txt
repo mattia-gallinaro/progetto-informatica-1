@@ -14,3 +14,52 @@ In magazzino ci sono 25 capi, di cui:
 8 pantaloni
 9 giubbotti
 In magazzino ci possono ancora stare 0 capi
+1
+
+In magazzino sono presenti:
+2 metri di cotone;
+3 metri di lino;
+4 metri di seta;
+5 metri di pizzo;
+6 metri di velluto;
+7 metri di lana;
+8 metri di maglia;
+In magazzino ci sono 35 metri di stoffa e ci possono ancora stare 0 metri
+In magazzino ci sono 24 capi, di cui:
+9 felpe
+7 pantaloni
+8 giubbotti
+In magazzino ci possono ancora stare 0 capi
+1
+
+In magazzino sono presenti:
+2 metri di cotone;
+3 metri di lino;
+4 metri di seta;
+5 metri di pizzo;
+6 metri di velluto;
+7 metri di lana;
+8 metri di maglia;
+In magazzino ci sono 35 metri di stoffa e ci possono ancora stare 0 metri
+In magazzino ci sono 24 capi, di cui:
+9 felpe
+7 pantaloni
+8 giubbotti
+In magazzino ci possono ancora stare 0 capi
+1
+
+In magazzino sono presenti:
+2 metri di cotone;
+3 metri di lino;
+4 metri di seta;
+5 metri di pizzo;
+6 metri di velluto;
+7 metri di lana;
+8 metri di maglia;
+In magazzino ci sono 35 metri di stoffa e ci possono ancora stare 0 metri
+In magazzino ci sono 24 capi, di cui:
+9 felpe
+7 pantaloni
+8 giubbotti
+In magazzino ci possono ancora stare 0 capi
+Il pantalone è stato venduto a 230029107 euro
