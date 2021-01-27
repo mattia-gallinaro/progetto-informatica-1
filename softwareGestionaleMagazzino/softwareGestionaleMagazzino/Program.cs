@@ -472,6 +472,7 @@ namespace prototipo_magazzino
                 {
                     Console.WriteLine("\nE' stata raggiunta la quantità massima di stoffa immagazzinabile; è neccessario usarne per poterne comprare di nuova.");
                     iteratore = "";
+                    Console.ReadKey();
                 }
                 else
                 {
