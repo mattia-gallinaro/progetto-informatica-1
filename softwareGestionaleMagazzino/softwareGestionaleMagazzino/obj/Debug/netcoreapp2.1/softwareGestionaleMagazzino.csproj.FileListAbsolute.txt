@@ -20,3 +20,14 @@ C:\Users\Utente\Documents\GitHub\progetto-informatica-1\softwareGestionaleMagazz
 C:\Users\Utente\Documents\GitHub\progetto-informatica-1\softwareGestionaleMagazzino\softwareGestionaleMagazzino\obj\Debug\netcoreapp2.1\softwareGestionaleMagazzino.AssemblyInfo.cs
 C:\Users\Utente\Documents\GitHub\progetto-informatica-1\softwareGestionaleMagazzino\softwareGestionaleMagazzino\obj\Debug\netcoreapp2.1\softwareGestionaleMagazzino.dll
 C:\Users\Utente\Documents\GitHub\progetto-informatica-1\softwareGestionaleMagazzino\softwareGestionaleMagazzino\obj\Debug\netcoreapp2.1\softwareGestionaleMagazzino.pdb
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\softwareGestionaleMagazzino\softwareGestionaleMagazzino\bin\Debug\netcoreapp2.1\softwareGestionaleMagazzino.deps.json
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\softwareGestionaleMagazzino\softwareGestionaleMagazzino\bin\Debug\netcoreapp2.1\softwareGestionaleMagazzino.runtimeconfig.json
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\softwareGestionaleMagazzino\softwareGestionaleMagazzino\bin\Debug\netcoreapp2.1\softwareGestionaleMagazzino.runtimeconfig.dev.json
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\softwareGestionaleMagazzino\softwareGestionaleMagazzino\bin\Debug\netcoreapp2.1\softwareGestionaleMagazzino.dll
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\softwareGestionaleMagazzino\softwareGestionaleMagazzino\bin\Debug\netcoreapp2.1\softwareGestionaleMagazzino.pdb
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\softwareGestionaleMagazzino\softwareGestionaleMagazzino\obj\Debug\netcoreapp2.1\softwareGestionaleMagazzino.csprojAssemblyReference.cache
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\softwareGestionaleMagazzino\softwareGestionaleMagazzino\obj\Debug\netcoreapp2.1\softwareGestionaleMagazzino.csproj.CoreCompileInputs.cache
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\softwareGestionaleMagazzino\softwareGestionaleMagazzino\obj\Debug\netcoreapp2.1\softwareGestionaleMagazzino.AssemblyInfoInputs.cache
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\softwareGestionaleMagazzino\softwareGestionaleMagazzino\obj\Debug\netcoreapp2.1\softwareGestionaleMagazzino.AssemblyInfo.cs
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\softwareGestionaleMagazzino\softwareGestionaleMagazzino\obj\Debug\netcoreapp2.1\softwareGestionaleMagazzino.dll
+C:\Users\HP\Documents\GitHub\progetto-informatica-1\softwareGestionaleMagazzino\softwareGestionaleMagazzino\obj\Debug\netcoreapp2.1\softwareGestionaleMagazzino.pdb
