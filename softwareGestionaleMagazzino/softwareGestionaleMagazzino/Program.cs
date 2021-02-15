@@ -370,6 +370,8 @@ namespace prototipo_magazzino
                         Console.WriteLine("\nLa produzione dell'abito è stata annullata.");//viene dato all'utente un feedback riguardo al cancellamento della produzione dell'abito
                     }
                     SalvataggioMateriali();//vengono salvati i materiali presenti attualmente in magazzino in un file esterno
+                    RicalcoloSommaQuantitàCapi();//si ricalcola la quantità di capi che si posseggono
+                    
                 }              
             }
             carattereJolly();
@@ -430,6 +432,7 @@ namespace prototipo_magazzino
                 }
                 File.WriteAllLines(percorsoFileCapi, righeCapi);//viene tutto salvato sul file esterno dedicato ai capi
                 SalvataggioMateriali();//si richiama questa funzione per salvare il profitto giornaliero
+                RicalcoloSommaQuantitàCapi();//si ricalcola la quantità di capi che si posseggono
             }
             carattereJolly();
         }
@@ -437,9 +440,9 @@ namespace prototipo_magazzino
         static void Menù4()//opzioni aggiuntive
         {
             Console.WriteLine("\n------------------------------------OPZIONI AGGIUNTIVE------------------------------------");//viene mostrato a schermo il menù delle opzioni aggiuntive
-            Console.WriteLine("Digita 1 se vuoi ordinare della stoffa;");
-            Console.WriteLine("Digita 2 se vuoi rispondere di nuovo alle domande essenziali;");
-            Console.Write("Digita 3 se vuoi modificare i valori fissi di alcune variabili.\n------------------------------------------------------------------------------------------\nRisposta: ");
+            Console.WriteLine("1. Ordina delle stoffe;");
+            Console.WriteLine("2. Rispondi nuovamente alle domande essenziali;");
+            Console.Write("3. Modifica i valori fissi di alcune variabili.\n------------------------------------------------------------------------------------------\nRisposta: ");
             string numOpzioni; //chiamo la variabile alla quale sarà assegnato il valore corrispondente al punto del menù che l'utente vuole mandare in esecuzione
             numOpzioni = Console.ReadLine(); //assunzione valore da tastiera
             while (numOpzioni != "1" && numOpzioni != "2" && numOpzioni != "3")//viene controllato che il valore inserito faccia parte di quelli proposti
@@ -607,7 +610,7 @@ namespace prototipo_magazzino
                         SalvataggioMateriali();//vengono salvati i materiali che si posseggono e il profitto giornaliero
                         RicalcoloSommaQuantitàStoffe();//viene ricalcolata la quantità totale di stoffe che si posseggono
                     }                    
-                    Console.WriteLine("\nDigita '0' per ordinare altra stoffa; premi altro per tornare al menù principale");//viene chiesto se si vuole ordinare altra stoffa
+                    Console.Write("\nDigita '0' per ordinare altra stoffa; premi altro per tornare al menù principale\nRisposta: ");//viene chiesto se si vuole ordinare altra stoffa
                     iteratore = Console.ReadLine();//se l'iteratore è diverso da '0' il while si interrompe e fa tornare l'utente al menù principale
                 }
             }
@@ -642,6 +645,7 @@ namespace prototipo_magazzino
                                     controlloConversione1 = Console.ReadLine();//viene controllato che ciò che l'utente inserisce si possa convertire in double
                                     stoffeMaxMagazzino = ControlloReadLineDouble(controlloConversione1, "\nIl carattere inserito non è valido; reinserire.\nRisposta: ");
                                 }
+                                Console.WriteLine("\nLa quantità delle stoffe massime è stata modificata.");
                                 break;
                             case "2"://se si inserisce 2 si può modificare la capienza massima di capi
                                 Console.Write("\nInserire la capienza massima di abiti in magazzino:\nRisposta: ");
@@ -653,6 +657,7 @@ namespace prototipo_magazzino
                                     controlloConversione2 = Console.ReadLine();//viene controllato che ciò che l'utente inserisce si possa convertire in intero
                                     capiMaxMagazzino = ControlloReadLineInt32(controlloConversione2, "\nIl carattere inserito non è valido; reinserire.\nRisposta: ");
                                 }
+                                Console.WriteLine("\nLa capienza massima di abiti è stata modificata.");
                                 break;
                             case "3"://se si inserisce 3 si può modificare il costo del colorante
                                 Console.Write("\nInserire il costo del colorante per abito espresso in euro:\nRisposta: ");
@@ -664,6 +669,7 @@ namespace prototipo_magazzino
                                     controlloConversione3 = Console.ReadLine();//viene controllato che ciò che l'utente inserisce si possa convertire in double
                                     colore = ControlloReadLineDouble(controlloConversione3, "Il carattere inserito non è valido; reinserire.");
                                 }
+                                Console.WriteLine("\nIl costo del colorante è stato modificato.");
                                 break;
                             case "4"://se si inserisce 4 si può modificare il costo della manodopera
                                 Console.Write("\nInserire il costo della manodopera per abito espresso in euro:\nRisposta: ");
@@ -675,6 +681,7 @@ namespace prototipo_magazzino
                                     controlloConversione4 = Console.ReadLine();//viene controllato che ciò che l'utente inserisce si possa convertire in double
                                     manodopera = ControlloReadLineDouble(controlloConversione4, "\nIl carattere inserito non è valido; reinserire.\nRisposta: ");
                                 }
+                                Console.WriteLine("\nIl costo della manodopera è stato modificato.");
                                 break;
                         }
 
@@ -804,14 +811,7 @@ namespace prototipo_magazzino
                     stoffe[i] = double.Parse(righeMateriali[i]);
                 }
             }
-            
-            string[] righeCapi = File.ReadAllLines(percorsoFileCapi);//viene letto il file dei capi
-            for (int a = 0; a < righeCapi.Length; a++)//si somma la quantità di ogni capo immagazzinato
-            {
-                string[] capo = righeCapi[a].Split(";");
-                sommaQuantitàCapi += Int32.Parse(capo[4]);
-            }
-
+                   
             string[] righeFileImpostazioni = File.ReadAllLines(percorsoFileImpostazioni);//si assegnano alle variabili fisse i valori salvati nel file delle impostazioni
             stoffeMaxMagazzino = double.Parse(righeFileImpostazioni[0]);
             capiMaxMagazzino = Int32.Parse(righeFileImpostazioni[1]);
@@ -821,6 +821,7 @@ namespace prototipo_magazzino
             string[] righeFileProfitti = File.ReadAllLines(percorsoFileProfitti);//si assegna alla variabile del profitto giornaliero il valore che è stato salvato nel file odierno
             profittoGiorn = double.Parse(righeFileProfitti[0]);
             RicalcoloSommaQuantitàStoffe();//viene ricalcolata la quantità di stoffe che si posseggono
+            RicalcoloSommaQuantitàCapi();//viene ricalcolata la quantità di capi che si posseggono
 
             if (!File.Exists(percorsoFileMateriali))//viene controllato se esiste il file dei materiali in possesso
             {
@@ -853,6 +854,17 @@ namespace prototipo_magazzino
             for (int a = 0; a < stoffe.Length; a++)//e si aggiunge alla variabile la quantità attualmente in possesso di ogni stoffa
             {
                 sommaQuantitàStoffe += stoffe[a];
+            }
+        }
+
+        static void RicalcoloSommaQuantitàCapi()//ricalcola la quantità di capi attualmente immagazzinati
+        {
+            sommaQuantitàCapi = 0;
+            string[] righeCapi = File.ReadAllLines(percorsoFileCapi);//viene letto il file dei capi
+            for (int a = 0; a < righeCapi.Length; a++)//si somma la quantità di ogni capo immagazzinato
+            {
+                string[] capo = righeCapi[a].Split(";");
+                sommaQuantitàCapi += Int32.Parse(capo[4]);
             }
         }
     }
