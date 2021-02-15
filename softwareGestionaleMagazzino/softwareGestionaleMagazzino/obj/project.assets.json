@@ -688,23 +688,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Utente\\.nuget\\packages\\": {},
+    "C:\\Users\\HP\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Utente\\Documents\\GitHub\\progetto-informatica-1\\softwareGestionaleMagazzino\\softwareGestionaleMagazzino\\softwareGestionaleMagazzino.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Documents\\GitHub\\progetto-informatica-1\\softwareGestionaleMagazzino\\softwareGestionaleMagazzino\\softwareGestionaleMagazzino.csproj",
       "projectName": "softwareGestionaleMagazzino",
-      "projectPath": "C:\\Users\\Utente\\Documents\\GitHub\\progetto-informatica-1\\softwareGestionaleMagazzino\\softwareGestionaleMagazzino\\softwareGestionaleMagazzino.csproj",
-      "packagesPath": "C:\\Users\\Utente\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Utente\\Documents\\GitHub\\progetto-informatica-1\\softwareGestionaleMagazzino\\softwareGestionaleMagazzino\\obj\\",
+      "projectPath": "C:\\Users\\HP\\Documents\\GitHub\\progetto-informatica-1\\softwareGestionaleMagazzino\\softwareGestionaleMagazzino\\softwareGestionaleMagazzino.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HP\\Documents\\GitHub\\progetto-informatica-1\\softwareGestionaleMagazzino\\softwareGestionaleMagazzino\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Utente\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

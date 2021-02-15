@@ -99,12 +99,12 @@ namespace prototipo_magazzino
             Console.Clear();//viene pulita la console
             //vengono mostrate all'utente le possibili azioni che si possono compiere
             Console.WriteLine($"Oggi è il {orario}");
-            Console.WriteLine("\n\t\t\tMENU':\n");
-            Console.WriteLine("Digita 1 se vuoi visualizzare la stoffa immagazzinata, lo spazio occupato e il profitto giornaliero;");
-            Console.WriteLine("Digita 2 se vuoi mandare in produzione dei capi;");
-            Console.WriteLine("Digita 3 se vuoi vendere i capi che sono stati prodotti;");
-            Console.WriteLine("Digita 4 se vuoi visualizzare delle opzioni aggiuntive;");
-            Console.Write("Digita * se vuoi terminare il programma.\nRisposta: ");
+            Console.WriteLine("\n------------------------------------MENU' DI SCELTA------------------------------------");
+            Console.WriteLine("1. Visualizza la stoffa immagazzinata, lo spazio occupato e il profitto giornaliero;");
+            Console.WriteLine("2. Manda in produzione dei capi;");
+            Console.WriteLine("3. Vendi i capi che sono stati prodotti;");
+            Console.WriteLine("4. Visualizza opzioni aggiuntive;");
+            Console.Write("*. Termina il programma.\n---------------------------------------------------------------------------------------\nRisposta: ");
 
             string NumeroMenù; //chiamo la variabile alla quale sarà assegnato il valore corrispondente al punto del menù che l'utente vuole mandare in esecuzione
             NumeroMenù = Console.ReadLine(); //assunzione valore da tastiera
@@ -436,10 +436,10 @@ namespace prototipo_magazzino
 
         static void Menù4()//opzioni aggiuntive
         {
-            Console.WriteLine("\n\t\t\tOPZIONI AGGIUNTIVE:\n");//viene mostrato a schermo il menù delle opzioni aggiuntive
+            Console.WriteLine("\n------------------------------------OPZIONI AGGIUNTIVE------------------------------------");//viene mostrato a schermo il menù delle opzioni aggiuntive
             Console.WriteLine("Digita 1 se vuoi ordinare della stoffa;");
             Console.WriteLine("Digita 2 se vuoi rispondere di nuovo alle domande essenziali;");
-            Console.Write("Digita 3 se vuoi modificare i valori fissi di alcune variabili.\nRisposta: ");
+            Console.Write("Digita 3 se vuoi modificare i valori fissi di alcune variabili.\n------------------------------------------------------------------------------------------\nRisposta: ");
             string numOpzioni; //chiamo la variabile alla quale sarà assegnato il valore corrispondente al punto del menù che l'utente vuole mandare in esecuzione
             numOpzioni = Console.ReadLine(); //assunzione valore da tastiera
             while (numOpzioni != "1" && numOpzioni != "2" && numOpzioni != "3")//viene controllato che il valore inserito faccia parte di quelli proposti
